@@ -11,66 +11,127 @@ import Charts
 
 class DashboardViewController: BaseViewController, UIBroker {
     var payLoad: [String : Any]?
-    
-    lazy var viewModel = DashboardViewModel()
 
-    @IBOutlet weak var fulfillmentView: BarChartView!
+    lazy var dashboardViewModel = DashboardViewModel()
+
+    @IBOutlet weak var barChartView: BarChartView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        barChartView.noDataText = "You need to provide data for the chart."
         
-        // Do any additional setup after loading the view.
-        setChartData()
+        barChartView.delegate = self
+        
+        dashboardViewModel.getDashboardData { (error) in
+            guard error == nil else {
+                return
+            }
+            self.setUpGroupBar()
+        }
+    }
+}
+    
+
+extension DashboardViewController: ChartViewDelegate {
+
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        
+    }
+    
+    /// Called when a user stops panning between values on the chart
+    func chartViewDidEndPanning(_ chartView: ChartViewBase) {
+        
+    }
+    
+    // Called when nothing has been selected or an "un-select" has been made.
+    func chartValueNothingSelected(_ chartView: ChartViewBase) {
+        
+    }
+    
+    // Callbacks when the chart is scaled / zoomed via pinch zoom gesture.
+    func chartScaled(_ chartView: ChartViewBase, scaleX: CGFloat, scaleY: CGFloat) {
+        
+    }
+    
+    // Callbacks when the chart is moved / translated via drag gesture.
+    func chartTranslated(_ chartView: ChartViewBase, dX: CGFloat, dY: CGFloat) {
+        
+    }
+
+    // Callbacks when Animator stops animating
+    func chartView(_ chartView: ChartViewBase, animatorDidStop animator: Animator) {
+        
     }
 }
 
 extension DashboardViewController {
     
-    fileprivate func setChartData() {
-        fulfillmentView.xAxis.labelPosition = .bottom
-        fulfillmentView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-        
-        viewModel.getDashboardData { [weak self] error in
-            let chartDataSet = BarChartDataSet.init(entries: self?.viewModel.xAxis(), label: self?.viewModel.xAxisTitle())
-            chartDataSet.colors = ChartColorTemplates.colorful()
-            
-            let chartData = BarChartData.init(dataSet: chartDataSet)
-            if let yAxis = self?.viewModel.yAxis() {
-                let chartFormatter = BarChartFormatter(labels: yAxis)
-                self?.fulfillmentView.xAxis.valueFormatter = chartFormatter
-                self?.fulfillmentView.xAxis.labelCount = yAxis.count
-            }
-            self?.fulfillmentView.data = chartData
-        }
-    }
+    private func setUpGroupBar() {
+        //legend
+        let legend = barChartView.legend
+        legend.enabled = true
+        legend.horizontalAlignment = .right
+        legend.verticalAlignment = .top
+        legend.orientation = .vertical
+        legend.drawInside = true
+        legend.yOffset = 10.0;
+        legend.xOffset = 10.0;
+        legend.yEntrySpace = 0.0;
 
-    // MARK: - IBAction Methods
-    @IBAction func buttonAction(_ sender: UIButton) {
-//        dashboardViewModel.logIn("VJY333", "scanta") {  [weak self]  (error, response) in
-//            guard self != nil else { return }
-//            if error {
-//                print("Error")
-//            } else if let loginModel = response as? DashboardViewModel {
-//                print(loginModel.self)
-//            }
-//        }
+        let xaxis = barChartView.xAxis
+        xaxis.drawGridLinesEnabled = true
+        xaxis.labelPosition = .bottom
+        xaxis.centerAxisLabelsEnabled = true
+        xaxis.valueFormatter = IndexAxisValueFormatter(values:self.dashboardViewModel.getAccounts())
+        xaxis.granularity = 1
+
+        let leftAxisFormatter = NumberFormatter()
+        leftAxisFormatter.maximumFractionDigits = 1
+
+        let yaxis = barChartView.leftAxis
+        yaxis.spaceTop = 0.35
+        yaxis.axisMinimum = 0
+        yaxis.drawGridLinesEnabled = false
+
+        barChartView.rightAxis.enabled = false
+        
+        setChart()
+    }
+    
+    private func setChart() {
+        var dataEntries: [BarChartDataEntry] = []
+        var dataEntries1: [BarChartDataEntry] = []
+
+        for i in 0..<self.dashboardViewModel.getAccounts().count {
+
+            let dataEntry = BarChartDataEntry(x: Double(i) , y: Double(self.dashboardViewModel.getOpenNeeds()[i]))
+            dataEntries.append(dataEntry)
+
+            let dataEntry1 = BarChartDataEntry(x: Double(i) , y: Double(self.dashboardViewModel.getClosedNeeds()[i]))
+            dataEntries1.append(dataEntry1)
+        }
+
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Open Needs")
+        let chartDataSet1 = BarChartDataSet(entries: dataEntries1, label: "Needs Closed")
+
+        let dataSets: [BarChartDataSet] = [chartDataSet,chartDataSet1]
+        chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
+        chartDataSet1.colors = [UIColor(red: 0/255, green: 100/255, blue: 0/255, alpha: 1)]
+
+        let chartData = BarChartData(dataSets: dataSets)
+
+        let groupSpace = 0.3
+        let barSpace = 0.05
+        let barWidth = 0.3
+        let groupCount = self.dashboardViewModel.getAccounts().count
+        let startYear = 0
+        chartData.barWidth = barWidth;
+        barChartView.xAxis.axisMinimum = Double(startYear)
+        let gg = chartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
+        barChartView.xAxis.axisMaximum = Double(startYear) + gg * Double(groupCount)
+        chartData.groupBars(fromX: Double(startYear), groupSpace: groupSpace, barSpace: barSpace)
+        barChartView.notifyDataSetChanged()
+        barChartView.data = chartData
+        barChartView.backgroundColor = .clear
+        barChartView.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
     }
 }
-
-extension DashboardViewController {
-
-    private class BarChartFormatter: NSObject, IAxisValueFormatter {
-        
-        var labels: [String] = []
-        
-        func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-            return labels[Int(value)]
-        }
-        
-        init(labels: [String]) {
-            super.init()
-            self.labels = labels
-        }
-    }
-}
-

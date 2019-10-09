@@ -30,6 +30,7 @@
 		9E1EFCC1234D863E005EE644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCBB234D863E005EE644 /* LaunchScreen.storyboard */; };
 		9E1EFCC2234D863E005EE644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCBD234D863E005EE644 /* Main.storyboard */; };
 		9E59BE65234DA6A500E8B270 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59BE64234DA6A500E8B270 /* NetworkManager.swift */; };
+		9ECE3D69234DEE2400904C07 /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ECE3D68234DEE2400904C07 /* Services.plist */; };
 		9ED17BD8234DD78D00DB7A43 /* skillSet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9ED17BD6234DD78D00DB7A43 /* skillSet.json */; };
 		9ED17BD9234DD78D00DB7A43 /* accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 9ED17BD7234DD78D00DB7A43 /* accounts.json */; };
 		ED892DEED1FDA898DCF3B7BC /* Pods_HRForecast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B8CAA22F6F0C97BBD5FA34 /* Pods_HRForecast.framework */; };
@@ -62,6 +63,7 @@
 		9E1EFCBC234D863E005EE644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E1EFCBE234D863E005EE644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E59BE64234DA6A500E8B270 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9ECE3D68234DEE2400904C07 /* Services.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
 		9ED17BD6234DD78D00DB7A43 /* skillSet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skillSet.json; sourceTree = "<group>"; };
 		9ED17BD7234DD78D00DB7A43 /* accounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accounts.json; sourceTree = "<group>"; };
 		D2E943906CCC2DAA077AB16D /* Pods-HRForecast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRForecast.release.xcconfig"; path = "Target Support Files/Pods-HRForecast/Pods-HRForecast.release.xcconfig"; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				42711882234E1342000E77D7 /* Navigation.plist */,
+				9ECE3D68234DEE2400904C07 /* Services.plist */,
 				9ED17BD5234DD78D00DB7A43 /* MockJson */,
 			);
 			path = SupportingFiles;
@@ -406,6 +409,7 @@
 				9ED17BD9234DD78D00DB7A43 /* accounts.json in Resources */,
 				8182BD04234DD20A0031ED76 /* GoogleService-Info.plist in Resources */,
 				42711883234E1343000E77D7 /* Navigation.plist in Resources */,
+				9ECE3D69234DEE2400904C07 /* Services.plist in Resources */,
 				9ED17BD8234DD78D00DB7A43 /* skillSet.json in Resources */,
 				9E1EFCAC234D85E4005EE644 /* Assets.xcassets in Resources */,
 				9E1EFCC1234D863E005EE644 /* LaunchScreen.storyboard in Resources */,

@@ -28,27 +28,15 @@ class DashboardViewModel: NSObject {
 }
 
 extension DashboardViewModel {
-    
-    func xAxisTitle() -> String {
-        return fulfillment?.x.title ?? ""
+    func getAccounts() -> [String] {
+        return fulfillment?.accounts ?? []
     }
     
-    func xAxis() -> [ChartDataEntry]? {
-        return chartDataEntry(fulfillment?.x) as? [ChartDataEntry]
+    func getOpenNeeds() -> [Int] {
+        return fulfillment?.requirementFulfilled ?? []
     }
     
-    func yAxisTitle() -> String {
-        return fulfillment?.y.title ?? ""
-    }
-    
-    func yAxis() -> [String]? {
-        return chartDataEntry(fulfillment?.y) as? [String]
-    }
-    
-    func chartDataEntry(_ axis: AxisData?) -> [Any]? {
-        guard let axis = axis else {
-            return nil
-        }
-        return axis.values
+    func getClosedNeeds() -> [Int] {
+        return fulfillment?.requirementCount ?? []
     }
 }

@@ -160,7 +160,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="d0f-37-lHa" firstAttribute="top" secondItem="bUk-Pv-IJ6" secondAttribute="top" constant="20" id="ON3-wS-hJu"/>
                             <constraint firstItem="d0f-37-lHa" firstAttribute="leading" secondItem="bUk-Pv-IJ6" secondAttribute="leading" constant="20" id="dI4-aQ-duC"/>
@@ -168,7 +168,7 @@
                         <viewLayoutGuide key="safeArea" id="bUk-Pv-IJ6"/>
                     </view>
                     <connections>
-                        <outlet property="fulfillmentView" destination="d0f-37-lHa" id="kvV-qY-tyI"/>
+                        <outlet property="barChartView" destination="d0f-37-lHa" id="CEr-Wd-SNc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxE-2Y-fa1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

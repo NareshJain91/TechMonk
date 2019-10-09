@@ -6,6 +6,8 @@
       "level": "SAL1",
       "platform": "iOS",
       "priority": "H1",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "10-10-2019",
       "tentative_fulfilment": "10-15-2019"
     },
@@ -15,6 +17,8 @@
       "level": "SAL1",
       "platform": "android",
       "priority": "H1",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "10-10-2019",
       "tentative_fulfilment": "10-15-2019"
     },
@@ -24,6 +28,8 @@
       "level": "SAL1",
       "platform": "java",
       "priority": "H1",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "10-10-2019",
       "tentative_fulfilment": "10-15-2019"
     },
@@ -33,6 +39,8 @@
       "level": "SAL1",
       "platform": "javascript",
       "priority": "H1",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "10-10-2019",
       "tentative_fulfilment": "10-15-2019"
     },
@@ -42,6 +50,8 @@
       "level": "SAL1",
       "platform": "dotnet",
       "priority": "H1",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "10-10-2019",
       "tentative_fulfilment": "10-15-2019"
     }
@@ -53,6 +63,8 @@
       "level": "SAL1",
       "platform": "iOS",
       "priority": "H1",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "10-10-2019",
       "tentative_fulfilment": "11-20-2019"
     },
@@ -61,6 +73,8 @@
       "isFulfilled": false,
       "platform": "android",
       "priority": "H1",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "12-10-2019",
       "tentative_fulfilment": "12-15-2019"
     },
@@ -70,6 +84,8 @@
       "level": "SAL1",
       "platform": "java",
       "priority": "H1",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "12-10-2019",
       "tentative_fulfilment": "12-15-2019"
     },
@@ -79,6 +95,8 @@
       "level": "SAL1",
       "platform": "javascript",
       "priority": "H1",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "12-10-2019",
       "tentative_fulfilment": "12-15-2019"
     },
@@ -88,6 +106,8 @@
       "level": "SAL1",
       "platform": "dotnet",
       "priority": "H1",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "12-10-2019",
       "tentative_fulfilment": "12-15-2019"
     }
@@ -99,6 +119,8 @@
       "level": "SAL1",
       "platform": "iOS",
       "priority": "H2",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "10-10-2019",
       "tentative_fulfilment": "11-15-2019"
     },
@@ -108,6 +130,8 @@
       "level": "SAL2",
       "platform": "android",
       "priority": "H2",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "09-10-2019",
       "tentative_fulfilment": "09-15-2019"
     },
@@ -117,6 +141,8 @@
       "level": "SAL2",
       "platform": "java",
       "priority": "H2",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "09-10-2019",
       "tentative_fulfilment": "09-15-2019"
     },
@@ -126,6 +152,8 @@
       "level": "SAL2",
       "platform": "javascript",
       "priority": "H2",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "09-10-2019",
       "tentative_fulfilment": "09-15-2019"
     },
@@ -135,6 +163,8 @@
       "level": "SAL2",
       "platform": "dotnet",
       "priority": "H2",
+      "requirementCount": 20,
+      "requirementFulfilled": 10,
       "tenatative_date": "09-10-2019",
       "tentative_fulfilment": "09-15-2019"
     }

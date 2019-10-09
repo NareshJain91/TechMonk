@@ -10,13 +10,13 @@ import Foundation
 
 struct Constants {
 
-    static let baseURL = "http://34.212.28.121"
-    static let hostPath = "/sass/webapi"
+    static let baseURL = "https://hrforecast-9141e.firebaseio.com"
     
-    /// Constants for MCD Network Path
     struct Url {
-        static let loginAPI = baseURL + hostPath + "/user/login"
-        static let dummyAPI = "https://jsonplaceholder.typicode.com/todos/1"
+        static let accountsAPI = baseURL + "/accounts.json"
+        static let skillSetAPI = baseURL + "/skillSet.json"
+        static let profileAPI = baseURL + "/profiles.json"
+        static let candidateAPI = baseURL + "/candidates.json"
     }
 }
 

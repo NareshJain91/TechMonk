@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SearchEngine">
-   </FileRef>
-   <FileRef
       location = "group:HRForecast.xcodeproj">
    </FileRef>
    <FileRef
