@@ -5,9 +5,6 @@
       location = "group:SearchEngine">
    </FileRef>
    <FileRef
-      location = "group:Charts">
-   </FileRef>
-   <FileRef
       location = "group:HRForecast.xcodeproj">
    </FileRef>
    <FileRef

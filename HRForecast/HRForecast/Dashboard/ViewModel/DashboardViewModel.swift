@@ -10,6 +10,8 @@ import Foundation
 
 class DashboardViewModel: NSObject {
     
+//    var fulfillment
+    
     override init() {
         super.init()
     }
