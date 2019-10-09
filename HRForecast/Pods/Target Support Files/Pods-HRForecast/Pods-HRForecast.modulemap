@@ -1,6 +1,0 @@
-framework module Pods_HRForecast {
-  umbrella header "Pods-HRForecast-umbrella.h"
-
-  export *
-  module * { export * }
-}
