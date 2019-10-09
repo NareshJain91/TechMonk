@@ -17,6 +17,7 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         // Do any additional setup after loading the view.
         setChartData()
     }
@@ -52,6 +53,8 @@ extension DashboardViewController {
 //                print(loginModel.self)
 //            }
 //        }
+=======
+>>>>>>> ecf3868b2cca03a34a4d430a591268ff45648dc8
     }
 }
 
