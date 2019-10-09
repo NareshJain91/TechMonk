@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,13 @@
 		4271187F234E0C45000E77D7 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271187E234E0C45000E77D7 /* ActivityIndicatorView.swift */; };
 		42711881234E0C6C000E77D7 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711880234E0C6C000E77D7 /* LoadingIndicatorViewController.swift */; };
 		42711883234E1343000E77D7 /* Navigation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42711882234E1342000E77D7 /* Navigation.plist */; };
+		42711889234E2A93000E77D7 /* ProspectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711888234E2A93000E77D7 /* ProspectsViewController.swift */; };
+		42711899234E2B5D000E77D7 /* ProspectsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711894234E2B5D000E77D7 /* ProspectsWorker.swift */; };
+		4271189A234E2B5D000E77D7 /* ProspectsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711896234E2B5D000E77D7 /* ProspectsDataModel.swift */; };
+		4271189B234E2B5D000E77D7 /* ProspectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711898234E2B5D000E77D7 /* ProspectsViewModel.swift */; };
+		4271189D234E2BED000E77D7 /* ProspectsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271189C234E2BED000E77D7 /* ProspectsConstants.swift */; };
+		427118A0234E31EB000E77D7 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271189F234E31EB000E77D7 /* DashboardService.swift */; };
+		427118A2234E32D2000E77D7 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = 427118A1234E32D2000E77D7 /* NetworkManager */; };
 		8182BD04234DD20A0031ED76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */; };
 		9E07D9BE234DB4FE00135FE0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9BD234DB4FE00135FE0 /* Constants.swift */; };
 		9E07D9C7234DD0D500135FE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9C3234DD0D500135FE0 /* LoginViewModel.swift */; };
@@ -29,7 +36,6 @@
 		9E1EFCC0234D863E005EE644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EFCB9234D863E005EE644 /* AppDelegate.swift */; };
 		9E1EFCC1234D863E005EE644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCBB234D863E005EE644 /* LaunchScreen.storyboard */; };
 		9E1EFCC2234D863E005EE644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCBD234D863E005EE644 /* Main.storyboard */; };
-		9E59BE65234DA6A500E8B270 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59BE64234DA6A500E8B270 /* NetworkManager.swift */; };
 		9ECE3D69234DEE2400904C07 /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ECE3D68234DEE2400904C07 /* Services.plist */; };
 		9ED17BD8234DD78D00DB7A43 /* skillSet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9ED17BD6234DD78D00DB7A43 /* skillSet.json */; };
 		9ED17BD9234DD78D00DB7A43 /* accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 9ED17BD7234DD78D00DB7A43 /* accounts.json */; };
@@ -52,6 +58,12 @@
 		4271187E234E0C45000E77D7 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		42711880234E0C6C000E77D7 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
 		42711882234E1342000E77D7 /* Navigation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Navigation.plist; sourceTree = "<group>"; };
+		42711888234E2A93000E77D7 /* ProspectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsViewController.swift; sourceTree = "<group>"; };
+		42711894234E2B5D000E77D7 /* ProspectsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProspectsWorker.swift; sourceTree = "<group>"; };
+		42711896234E2B5D000E77D7 /* ProspectsDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProspectsDataModel.swift; sourceTree = "<group>"; };
+		42711898234E2B5D000E77D7 /* ProspectsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProspectsViewModel.swift; sourceTree = "<group>"; };
+		4271189C234E2BED000E77D7 /* ProspectsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsConstants.swift; sourceTree = "<group>"; };
+		4271189F234E31EB000E77D7 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 		8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E07D9BD234DB4FE00135FE0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E07D9C3234DD0D500135FE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -62,7 +74,6 @@
 		9E1EFCB9234D863E005EE644 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E1EFCBC234D863E005EE644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E1EFCBE234D863E005EE644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9E59BE64234DA6A500E8B270 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9ECE3D68234DEE2400904C07 /* Services.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
 		9ED17BD6234DD78D00DB7A43 /* skillSet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skillSet.json; sourceTree = "<group>"; };
 		9ED17BD7234DD78D00DB7A43 /* accounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accounts.json; sourceTree = "<group>"; };
@@ -76,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED892DEED1FDA898DCF3B7BC /* Pods_HRForecast.framework in Frameworks */,
+				427118A2234E32D2000E77D7 /* NetworkManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +97,7 @@
 		42711855234DE6E1000E77D7 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				4271189E234E31B0000E77D7 /* Service */,
 				4271185F234DE82B000E77D7 /* ViewModel */,
 				42711856234DE6E1000E77D7 /* Workers */,
 				42711858234DE6E1000E77D7 /* DataModel */,
@@ -189,6 +202,58 @@
 			path = LoadingIndicator;
 			sourceTree = "<group>";
 		};
+		42711884234E29D8000E77D7 /* Prospects */ = {
+			isa = PBXGroup;
+			children = (
+				42711895234E2B5D000E77D7 /* DataModel */,
+				42711897234E2B5D000E77D7 /* ViewModel */,
+				42711893234E2B5D000E77D7 /* Workers */,
+				42711885234E29E4000E77D7 /* ViewController */,
+				4271189C234E2BED000E77D7 /* ProspectsConstants.swift */,
+			);
+			path = Prospects;
+			sourceTree = "<group>";
+		};
+		42711885234E29E4000E77D7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				42711888234E2A93000E77D7 /* ProspectsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		42711893234E2B5D000E77D7 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				42711894234E2B5D000E77D7 /* ProspectsWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		42711895234E2B5D000E77D7 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				42711896234E2B5D000E77D7 /* ProspectsDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		42711897234E2B5D000E77D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42711898234E2B5D000E77D7 /* ProspectsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4271189E234E31B0000E77D7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4271189F234E31EB000E77D7 /* DashboardService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		9E07D9BC234DB4FE00135FE0 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +265,7 @@
 		9E07D9BF234DD0D500135FE0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				42711884234E29D8000E77D7 /* Prospects */,
 				42711855234DE6E1000E77D7 /* Dashboard */,
 				9E07D9C0234DD0D500135FE0 /* Login */,
 			);
@@ -273,7 +339,6 @@
 				8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */,
 				9E07D9BF234DD0D500135FE0 /* Modules */,
 				9E07D9BC234DB4FE00135FE0 /* Constants */,
-				9E59BE63234DA68700E8B270 /* NetworkManager */,
 				9E1EFCBA234D863E005EE644 /* UserInterface */,
 				9E1EFCB8234D863E005EE644 /* AppDelegate */,
 				9E1EFCAB234D85E4005EE644 /* Assets.xcassets */,
@@ -297,14 +362,6 @@
 				9E1EFCBD234D863E005EE644 /* Main.storyboard */,
 			);
 			path = UserInterface;
-			sourceTree = "<group>";
-		};
-		9E59BE63234DA68700E8B270 /* NetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-				9E59BE64234DA6A500E8B270 /* NetworkManager.swift */,
-			);
-			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 		9ED17BD4234DD78D00DB7A43 /* SupportingFiles */ = {
@@ -362,6 +419,7 @@
 			);
 			name = HRForecast;
 			packageProductDependencies = (
+				427118A1234E32D2000E77D7 /* NetworkManager */,
 			);
 			productName = HRForecast;
 			productReference = 9E1EFCA1234D85E3005EE644 /* HRForecast.app */;
@@ -468,18 +526,23 @@
 				9E07D9C7234DD0D500135FE0 /* LoginViewModel.swift in Sources */,
 				42711881234E0C6C000E77D7 /* LoadingIndicatorViewController.swift in Sources */,
 				42711871234E0A0A000E77D7 /* UIViewController+Extension.swift in Sources */,
-				9E59BE65234DA6A500E8B270 /* NetworkManager.swift in Sources */,
 				4271186A234E0936000E77D7 /* USBNavigator.swift in Sources */,
 				4271185C234DE6E1000E77D7 /* DashboardWorker.swift in Sources */,
 				4271186E234E095F000E77D7 /* LogUtil.swift in Sources */,
 				42711861234DE82B000E77D7 /* DashboardViewModel.swift in Sources */,
 				42711877234E0B4E000E77D7 /* GlobalConstants.swift in Sources */,
+				42711899234E2B5D000E77D7 /* ProspectsWorker.swift in Sources */,
+				427118A0234E31EB000E77D7 /* DashboardService.swift in Sources */,
 				9E1EFCC0234D863E005EE644 /* AppDelegate.swift in Sources */,
 				4271186B234E0936000E77D7 /* UIBroker.swift in Sources */,
+				4271189A234E2B5D000E77D7 /* ProspectsDataModel.swift in Sources */,
 				9E07D9C8234DD0D500135FE0 /* LoginViewController.swift in Sources */,
+				42711889234E2A93000E77D7 /* ProspectsViewController.swift in Sources */,
 				9E07D9BE234DB4FE00135FE0 /* Constants.swift in Sources */,
+				4271189B234E2B5D000E77D7 /* ProspectsViewModel.swift in Sources */,
 				4271185D234DE6E1000E77D7 /* DashboardDataModel.swift in Sources */,
 				4271187A234E0BB5000E77D7 /* BaseViewController.swift in Sources */,
+				4271189D234E2BED000E77D7 /* ProspectsConstants.swift in Sources */,
 				4271187F234E0C45000E77D7 /* ActivityIndicatorView.swift in Sources */,
 				4271185E234DE6E1000E77D7 /* DashboardViewController.swift in Sources */,
 				42711873234E0AD5000E77D7 /* NSObject+Extension.swift in Sources */,
@@ -690,6 +753,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		427118A1234E32D2000E77D7 /* NetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkManager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9E1EFC99234D85E3005EE644 /* Project object */;
 }

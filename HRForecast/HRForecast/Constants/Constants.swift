@@ -13,10 +13,10 @@ struct Constants {
     static let baseURL = "https://hrforecast-9141e.firebaseio.com"
     
     struct Url {
-        static let accountsAPI = baseURL + "/accounts.json"
-        static let skillSetAPI = baseURL + "/skillSet.json"
-        static let profileAPI = baseURL + "/profiles.json"
-        static let candidateAPI = baseURL + "/candidates.json"
+        static let accountsAPI = "/accounts.json"
+        static let skillSetAPI = "/skillSet.json"
+        static let profileAPI = "/profiles.json"
+        static let candidateAPI = "/candidates.json"
     }
 }
 
