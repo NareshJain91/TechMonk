@@ -10,5 +10,7 @@ target 'HRForecast' do
       pod 'SwiftyJSON'
       pod 'Firebase/Analytics'
       pod 'Firebase/Database'
+      pod 'Firebase/Auth'
+      pod 'CodableFirebase'
     
 end
