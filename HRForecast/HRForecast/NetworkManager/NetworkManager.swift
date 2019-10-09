@@ -16,6 +16,20 @@ typealias APIResponse = (_ error: Bool, _ data: Any?) -> Void
 
 class NetworkManager {
     
+    class func requestFromLocalJson(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void) {
+        if let path = Bundle.main.path(forResource: strURL, ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                let jsonObj = try JSON(data: data)
+                success(jsonObj)
+            } catch let error {
+                print("parse error: \(error.localizedDescription)")
+            }
+        } else {
+            print("Invalid filename/path.")
+        }
+    }
+    
     class func requestGETURL(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void) {
         Alamofire.request(strURL).responseJSON { (responseObject) -> Void in
             if responseObject.result.isSuccess {

@@ -10,7 +10,7 @@ import UIKit
 
 class DashboardViewController: UIViewController {
     
-    var dashboardViewModel = DashboardViewModel()
+    lazy var dashboardViewModel = DashboardViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,14 @@ class DashboardViewController: UIViewController {
 
     // MARK: - IBAction Methods
     @IBAction func buttonAction(_ sender: UIButton) {
-        
+        dashboardViewModel.logIn("VJY333", "scanta") {  [weak self]  (error, response) in
+            guard self != nil else { return }
+            if error {
+                print("Error")
+            } else if let loginModel = response as? DashboardViewModel {
+                print(loginModel.self)
+            }
+        }
     }
 
 }
