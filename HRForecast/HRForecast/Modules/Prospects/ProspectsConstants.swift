@@ -13,7 +13,7 @@ struct ProspectsConstants {
     static let title = "Prospects"
 
     struct Url {
-        static let skillSetsAPI = Constants.baseURL + "/skillSet.json"
-        static let candidatesAPI = Constants.baseURL + "/candidates.json"
+        static let skillSetsAPI = "/skillSet.json"
+        static let candidatesAPI = "/candidates.json"
     }
 }

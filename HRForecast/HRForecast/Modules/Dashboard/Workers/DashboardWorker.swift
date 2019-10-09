@@ -12,17 +12,17 @@ import NetworkManager
 
 typealias WorkerCallback = (_ error: NSError?, _ data: Any?) -> Void
 
-class DashboardWorker {
+class DashboardWorker: BaseWorker {
     
     class func getDashboardData(callback: @escaping WorkerCallback) {
         let serviceResponse: ServiceResponse = { (err: NSError?, result: Any?) -> Void in
             guard let response =  result as? Dictionary<String, Any> else {
-                let parseError = NSError(domain: SessionManager.errorDomain, code: -1, userInfo: [NSLocalizedDescriptionKey: "Response was not 'BankHolidays' object."])
+                let parseError = NSError(domain: SessionManager.errorDomain, code: -1, userInfo: [NSLocalizedDescriptionKey: "Response was not 'Dashboard' object."])
                 callback(parseError, nil)
                 return
             }
             
-            let dashboardData = rootKey(response, type: SkillSetInfo.self)
+            let dashboardData = rootKey(response)
             let accountNames = dashboardData.accounts.map {
                 $0.name
             }
@@ -51,7 +51,7 @@ class DashboardWorker {
                                               serviceResponse: serviceResponse)
     }
     
-    class func rootKey<T: Decodable>(_ data: Dictionary<String, Any>, type: T.Type) -> DashboardData {
+    class func rootKey(_ data: Dictionary<String, Any>) -> DashboardData {
         var accountsList = [AccountInfo]()
         for key in data.keys {
             let value = data[key]
@@ -75,18 +75,5 @@ class DashboardWorker {
         }
         
         return AccountInfo(skillset: skillsList, name: accountName)
-    }
-    
-    class func parseData<T: Decodable>(_ data: Dictionary<String, Any>, type: T.Type) -> T? {
-        let jsonDecoder = JSONDecoder()
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
-            let skillSet = try jsonDecoder.decode(type, from: jsonData) as T
-            return skillSet
-        } catch let error {
-            print(error.localizedDescription)
-        }
-        
-        return nil
     }
 }

@@ -30,6 +30,8 @@
 		427118A2234E32D2000E77D7 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = 427118A1234E32D2000E77D7 /* NetworkManager */; };
 		427118A5234E6FA3000E77D7 /* DashboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427118A4234E6FA3000E77D7 /* DashboardConstants.swift */; };
 		427118A7234E720A000E77D7 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427118A6234E720A000E77D7 /* Theme.swift */; };
+		427118AA234E817A000E77D7 /* ProspectsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427118A9234E817A000E77D7 /* ProspectsService.swift */; };
+		427118AC234E81A3000E77D7 /* CandidatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427118AB234E81A3000E77D7 /* CandidatesService.swift */; };
 		8182BD04234DD20A0031ED76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */; };
 		9E07D9BE234DB4FE00135FE0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9BD234DB4FE00135FE0 /* Constants.swift */; };
 		9E07D9C7234DD0D500135FE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9C3234DD0D500135FE0 /* LoginViewModel.swift */; };
@@ -68,6 +70,8 @@
 		4271189F234E31EB000E77D7 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 		427118A4234E6FA3000E77D7 /* DashboardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardConstants.swift; sourceTree = "<group>"; };
 		427118A6234E720A000E77D7 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		427118A9234E817A000E77D7 /* ProspectsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProspectsService.swift; sourceTree = "<group>"; };
+		427118AB234E81A3000E77D7 /* CandidatesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidatesService.swift; sourceTree = "<group>"; };
 		8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E07D9BD234DB4FE00135FE0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E07D9C3234DD0D500135FE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 		42711884234E29D8000E77D7 /* Prospects */ = {
 			isa = PBXGroup;
 			children = (
+				427118A8234E817A000E77D7 /* Service */,
 				42711895234E2B5D000E77D7 /* DataModel */,
 				42711897234E2B5D000E77D7 /* ViewModel */,
 				42711893234E2B5D000E77D7 /* Workers */,
@@ -266,6 +271,15 @@
 				427118A4234E6FA3000E77D7 /* DashboardConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		427118A8234E817A000E77D7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				427118A9234E817A000E77D7 /* ProspectsService.swift */,
+				427118AB234E81A3000E77D7 /* CandidatesService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		9E07D9BC234DB4FE00135FE0 /* Constants */ = {
@@ -546,6 +560,7 @@
 				42711861234DE82B000E77D7 /* DashboardViewModel.swift in Sources */,
 				42711877234E0B4E000E77D7 /* GlobalConstants.swift in Sources */,
 				427118A5234E6FA3000E77D7 /* DashboardConstants.swift in Sources */,
+				427118AA234E817A000E77D7 /* ProspectsService.swift in Sources */,
 				42711899234E2B5D000E77D7 /* ProspectsWorker.swift in Sources */,
 				427118A0234E31EB000E77D7 /* DashboardService.swift in Sources */,
 				9E1EFCC0234D863E005EE644 /* AppDelegate.swift in Sources */,
@@ -560,6 +575,7 @@
 				4271187A234E0BB5000E77D7 /* BaseViewController.swift in Sources */,
 				4271189D234E2BED000E77D7 /* ProspectsConstants.swift in Sources */,
 				4271187F234E0C45000E77D7 /* ActivityIndicatorView.swift in Sources */,
+				427118AC234E81A3000E77D7 /* CandidatesService.swift in Sources */,
 				4271185E234DE6E1000E77D7 /* DashboardViewController.swift in Sources */,
 				42711873234E0AD5000E77D7 /* NSObject+Extension.swift in Sources */,
 			);

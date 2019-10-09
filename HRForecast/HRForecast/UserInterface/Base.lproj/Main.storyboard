@@ -62,10 +62,7 @@
                                     <constraint firstAttribute="height" constant="56" id="KdL-9j-KZd"/>
                                     <constraint firstAttribute="width" constant="200" id="Of1-H7-1u3"/>
                                 </constraints>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.027450980392156862" green="0.62352941176470589" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signInButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="933-PW-DyP"/>
                                 </connections>
@@ -215,7 +212,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gc7-5c-mwd">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gc7-5c-mwd" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="117" y="256" width="600" height="600"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
