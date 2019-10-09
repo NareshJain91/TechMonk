@@ -11,14 +11,35 @@ import Charts
 
 class DashboardViewController: UIViewController {
     
-    lazy var dashboardViewModel = DashboardViewModel()
+    lazy var viewModel = DashboardViewModel()
 
     @IBOutlet weak var fulfillmentView: BarChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        fulfillmentView.
+        setChartData()
+    }
+}
+
+extension DashboardViewController {
+    
+    fileprivate func setChartData() {
+        fulfillmentView.xAxis.labelPosition = .bottom
+        fulfillmentView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        
+        viewModel.getDashboardData { [weak self] error in
+            let chartDataSet = BarChartDataSet.init(entries: self?.viewModel.xAxis(), label: self?.viewModel.xAxisTitle())
+            chartDataSet.colors = ChartColorTemplates.colorful()
+            
+            let chartData = BarChartData.init(dataSet: chartDataSet)
+            if let yAxis = self?.viewModel.yAxis() {
+                let chartFormatter = BarChartFormatter(labels: yAxis)
+                self?.fulfillmentView.xAxis.valueFormatter = chartFormatter
+                self?.fulfillmentView.xAxis.labelCount = yAxis.count
+            }
+            self?.fulfillmentView.data = chartData
+        }
     }
 
     // MARK: - IBAction Methods
@@ -32,6 +53,22 @@ class DashboardViewController: UIViewController {
 //            }
 //        }
     }
+}
 
+extension DashboardViewController {
+
+    private class BarChartFormatter: NSObject, IAxisValueFormatter {
+        
+        var labels: [String] = []
+        
+        func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+            return labels[Int(value)]
+        }
+        
+        init(labels: [String]) {
+            super.init()
+            self.labels = labels
+        }
+    }
 }
 
