@@ -47,7 +47,7 @@ class LoginViewController: BaseViewController, UIBroker {
     var profiles: [String] = []
     
     lazy var loginViewModel = LoginViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarHidden(animaed: false)
@@ -72,7 +72,7 @@ extension LoginViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-        
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return profiles.count
     }
@@ -86,54 +86,69 @@ extension LoginViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         showActivityIndicator()
         Auth.auth().createUser(withEmail:usernameTextfield.text!, password: passwordTextfield.text!) { [weak self] user, error in
             self?.hideActivityIndicator()
-                    guard let strongSelf = self else { return }
-
-                    guard let firebaseUser = user?.user else {return}
-
-                    var fullNameArr = firebaseUser.email?.components(separatedBy: "@")
-                    var firstName: String = fullNameArr![0]
-                    var lastName: String? = fullNameArr!.count > 1 ? fullNameArr![1] : nil
-                let user = User(username: firstName, email: firebaseUser.email!, type: self!.profiles[strongSelf.signupPicker.selectedRow(inComponent: 0)])
-
-                let data = try! FirebaseEncoder().encode(user)
-                self!.reference!.child("users").child(firebaseUser.uid).setValue(data);
-                let alert = UIAlertController(title: "SignUp Success", message: "", preferredStyle: .alert)
+            guard let strongSelf = self else { return }
+            
+            guard let firebaseUser = user?.user else {
+                let alert = UIAlertController(title: "SignUp Failure", message: "\(error?.localizedDescription ?? "")", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self!.present(alert, animated: true, completion: nil)
+                strongSelf.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            let fullNameArr = firebaseUser.email?.components(separatedBy: "@")
+            let firstName: String = fullNameArr![0]
+            let user = User(username: firstName, email: firebaseUser.email!, type: strongSelf.profiles[strongSelf.signupPicker.selectedRow(inComponent: 0)])
+            
+            let data = try! FirebaseEncoder().encode(user)
+            strongSelf.reference!.child("users").child(firebaseUser.uid).setValue(data);
+            let alert = UIAlertController(title: "SignUp Success", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            strongSelf.present(alert, animated: true, completion: nil)
         }
     }
 }
-
-extension LoginViewController {
     
-    @IBAction func signUpButtonAction(_ sender: Any) {
-        signupPicker.isHidden = false
-    }
-    
-    @IBAction func signInButtonAction(_ sender: UIButton) {
+    extension LoginViewController {
         
-        showActivityIndicator()
-    
-        DispatchQueue.main.asyncAfter(deadline: .now()+2.0) {
-            self.hideActivityIndicator()
-            self.setNavigationBarHidden(animaed: false)
-            self.navigate(module: "dashboard", pushOrPresent: .push, payLoad: [:], pushPresentAnimated: false, schema: "Dashboard", completion: nil)
+        @IBAction func signUpButtonAction(_ sender: Any) {
+            signupPicker.isHidden = false
         }
-//        Auth.auth().signIn(withEmail: usernameTextfield.text!, password: passwordTextfield.text!) { [weak self] user, error in
-//            self?.hideActivityIndicator()
-//        guard let strongSelf = self else { return }
-//
-//            let alert = UIAlertController(title: "\(user)", message: "\(error)", preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "Click", style: .default, handler: nil))
-//            strongSelf.present(alert, animated: true, completion: nil)
-//        }
-    
+        
+        @IBAction func signInButtonAction(_ sender: UIButton) {
+            
+            showActivityIndicator()
+            
+            Auth.auth().signIn(withEmail: usernameTextfield.text!, password: passwordTextfield.text!) { [weak self] user, error in
+                self?.hideActivityIndicator()
+                guard let strongSelf = self else { return }
+                guard user != nil else {
+                    let alert = UIAlertController(title: "Login Failure", message: "\(error?.localizedDescription ?? "")", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    strongSelf.present(alert, animated: true, completion: nil)
+                    return
+                }
+                
+                strongSelf.reference!.child("users").child(user!.user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                guard let value = snapshot.value else { return }
+                do {
+                    let person = try FirebaseDecoder().decode(User.self, from: value)
+                    strongSelf.setNavigationBarHidden(animaed: false)
+                    strongSelf.navigate(module: "dashboard", pushOrPresent: .push, payLoad: ["person": person], pushPresentAnimated: false, schema: "Dashboard", completion: nil)
+                } catch let error {
+                    print(error)
+                    let alert = UIAlertController(title: "Login Failure", message: "\(error.localizedDescription ?? "")", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    strongSelf.present(alert, animated: true, completion: nil)
+                }
+                    
+                })
+            }
+            
+        }
     }
-
-}
-
+        
 struct User: Codable {
-    let username: String!
-    let email: String!
-    let type: String!
+            let username: String!
+            let email: String!
+            let type: String!
 }
