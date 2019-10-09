@@ -124,6 +124,7 @@
 				9E1EFC9D234D85E3005EE644 /* Sources */,
 				9E1EFC9E234D85E3005EE644 /* Frameworks */,
 				9E1EFC9F234D85E3005EE644 /* Resources */,
+				4D59C58F16B9A575F7238FB4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +182,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4D59C58F16B9A575F7238FB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HRForecast/Pods-HRForecast-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HRForecast/Pods-HRForecast-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HRForecast/Pods-HRForecast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E2AB5C9897D808F5EF6A1FB3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
