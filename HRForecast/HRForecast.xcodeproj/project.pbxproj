@@ -27,7 +27,6 @@
 		4271189B234E2B5D000E77D7 /* ProspectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711898234E2B5D000E77D7 /* ProspectsViewModel.swift */; };
 		4271189D234E2BED000E77D7 /* ProspectsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271189C234E2BED000E77D7 /* ProspectsConstants.swift */; };
 		427118A0234E31EB000E77D7 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271189F234E31EB000E77D7 /* DashboardService.swift */; };
-		427118A2234E32D2000E77D7 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = 427118A1234E32D2000E77D7 /* NetworkManager */; };
 		427118A5234E6FA3000E77D7 /* DashboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427118A4234E6FA3000E77D7 /* DashboardConstants.swift */; };
 		427118A7234E720A000E77D7 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427118A6234E720A000E77D7 /* Theme.swift */; };
 		427118AA234E817A000E77D7 /* ProspectsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427118A9234E817A000E77D7 /* ProspectsService.swift */; };
@@ -40,6 +39,10 @@
 		9E1EFCC0234D863E005EE644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EFCB9234D863E005EE644 /* AppDelegate.swift */; };
 		9E1EFCC1234D863E005EE644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCBB234D863E005EE644 /* LaunchScreen.storyboard */; };
 		9E1EFCC2234D863E005EE644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCBD234D863E005EE644 /* Main.storyboard */; };
+		9E5C953E234E962B00FFCA1B /* NetworkManager in Resources */ = {isa = PBXBuildFile; fileRef = 9E5C953C234E962A00FFCA1B /* NetworkManager */; };
+		9E5C953F234E962B00FFCA1B /* SearchEngine in Resources */ = {isa = PBXBuildFile; fileRef = 9E5C953D234E962A00FFCA1B /* SearchEngine */; };
+		9E5C9541234E963100FFCA1B /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = 9E5C9540234E963100FFCA1B /* NetworkManager */; };
+		9E5C9549234E9BC900FFCA1B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C9548234E9BC900FFCA1B /* AccountViewController.swift */; };
 		9ECE3D69234DEE2400904C07 /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ECE3D68234DEE2400904C07 /* Services.plist */; };
 		9ED17BD8234DD78D00DB7A43 /* skillSet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9ED17BD6234DD78D00DB7A43 /* skillSet.json */; };
 		9ED17BD9234DD78D00DB7A43 /* accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 9ED17BD7234DD78D00DB7A43 /* accounts.json */; };
@@ -82,6 +85,9 @@
 		9E1EFCB9234D863E005EE644 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E1EFCBC234D863E005EE644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E1EFCBE234D863E005EE644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9E5C953C234E962A00FFCA1B /* NetworkManager */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NetworkManager; sourceTree = SOURCE_ROOT; };
+		9E5C953D234E962A00FFCA1B /* SearchEngine */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SearchEngine; sourceTree = SOURCE_ROOT; };
+		9E5C9548234E9BC900FFCA1B /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		9ECE3D68234DEE2400904C07 /* Services.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
 		9ED17BD6234DD78D00DB7A43 /* skillSet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skillSet.json; sourceTree = "<group>"; };
 		9ED17BD7234DD78D00DB7A43 /* accounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accounts.json; sourceTree = "<group>"; };
@@ -95,7 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED892DEED1FDA898DCF3B7BC /* Pods_HRForecast.framework in Frameworks */,
-				427118A2234E32D2000E77D7 /* NetworkManager in Frameworks */,
+				9E5C9541234E963100FFCA1B /* NetworkManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +299,7 @@
 		9E07D9BF234DD0D500135FE0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9E5C9546234E9BC900FFCA1B /* Account */,
 				42711884234E29D8000E77D7 /* Prospects */,
 				42711855234DE6E1000E77D7 /* Dashboard */,
 				9E07D9C0234DD0D500135FE0 /* Login */,
@@ -362,6 +369,8 @@
 		9E1EFCA3234D85E3005EE644 /* HRForecast */ = {
 			isa = PBXGroup;
 			children = (
+				9E5C953C234E962A00FFCA1B /* NetworkManager */,
+				9E5C953D234E962A00FFCA1B /* SearchEngine */,
 				42711862234E08B3000E77D7 /* Common */,
 				9ED17BD4234DD78D00DB7A43 /* SupportingFiles */,
 				8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */,
@@ -390,6 +399,22 @@
 				9E1EFCBD234D863E005EE644 /* Main.storyboard */,
 			);
 			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		9E5C9546234E9BC900FFCA1B /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				9E5C9547234E9BC900FFCA1B /* ViewController */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		9E5C9547234E9BC900FFCA1B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9E5C9548234E9BC900FFCA1B /* AccountViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		9ED17BD4234DD78D00DB7A43 /* SupportingFiles */ = {
@@ -447,7 +472,7 @@
 			);
 			name = HRForecast;
 			packageProductDependencies = (
-				427118A1234E32D2000E77D7 /* NetworkManager */,
+				9E5C9540234E963100FFCA1B /* NetworkManager */,
 			);
 			productName = HRForecast;
 			productReference = 9E1EFCA1234D85E3005EE644 /* HRForecast.app */;
@@ -496,8 +521,10 @@
 				8182BD04234DD20A0031ED76 /* GoogleService-Info.plist in Resources */,
 				42711883234E1343000E77D7 /* Navigation.plist in Resources */,
 				9ECE3D69234DEE2400904C07 /* Services.plist in Resources */,
+				9E5C953E234E962B00FFCA1B /* NetworkManager in Resources */,
 				9ED17BD8234DD78D00DB7A43 /* skillSet.json in Resources */,
 				9E1EFCAC234D85E4005EE644 /* Assets.xcassets in Resources */,
+				9E5C953F234E962B00FFCA1B /* SearchEngine in Resources */,
 				9E1EFCC1234D863E005EE644 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +580,7 @@
 			files = (
 				9E07D9C7234DD0D500135FE0 /* LoginViewModel.swift in Sources */,
 				42711881234E0C6C000E77D7 /* LoadingIndicatorViewController.swift in Sources */,
+				9E5C9549234E9BC900FFCA1B /* AccountViewController.swift in Sources */,
 				42711871234E0A0A000E77D7 /* UIViewController+Extension.swift in Sources */,
 				4271186A234E0936000E77D7 /* USBNavigator.swift in Sources */,
 				4271185C234DE6E1000E77D7 /* DashboardWorker.swift in Sources */,
@@ -787,7 +815,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		427118A1234E32D2000E77D7 /* NetworkManager */ = {
+		9E5C9540234E963100FFCA1B /* NetworkManager */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkManager;
 		};

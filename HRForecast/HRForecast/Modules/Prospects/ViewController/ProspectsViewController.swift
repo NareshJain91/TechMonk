@@ -55,7 +55,7 @@ class ProspectsViewController: BaseViewController, UIBroker {
     }
     
     func updateChartData() {
-        self.setChartData(count: Int(10), range: UInt32(20))
+        self.setChartData(count: Int(6), range: UInt32(20))
     }
     
     func setChartData(count: Int, range: UInt32) {
@@ -76,7 +76,10 @@ class ProspectsViewController: BaseViewController, UIBroker {
        let data = BarChartData(dataSet: set)
        data.setValueFont(.systemFont(ofSize: 7, weight: .light))
        data.setValueTextColor(.white)
-       
+        
+        let months = ["USBank", "Llyods", "Lufthansa", "Tacobell", "Macdonalds", "CitiBank"]
+        chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:months)
+        chartView.xAxis.labelPosition = .bottom
        chartView.fitBars = true
        chartView.data = data
     }
