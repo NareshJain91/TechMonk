@@ -46,7 +46,6 @@
                                 <rect key="frame" x="532.5" y="402" width="47" height="30"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q0o-E9-kGy"/>
                                     <action selector="signInButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="933-PW-DyP"/>
                                 </connections>
                             </button>

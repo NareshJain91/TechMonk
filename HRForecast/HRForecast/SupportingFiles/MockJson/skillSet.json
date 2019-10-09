@@ -1,0 +1,132 @@
+{
+  "android": [
+    {
+      "account": "Llyods",
+      "date": "09-10-2019",
+      "level": "SAL1",
+      "priority": "H1",
+      "tenatative_date": "10-10-2019",
+      "tentative_fulfilment": "10-15-2019"
+    },
+    {
+      "account": "USB",
+      "date": "09-10-2019",
+      "level": "SAL2",
+      "priority": "H2",
+      "tenatative_date": "09-10-2019",
+      "tentative_fulfilment": "09-15-2019"
+    },
+    {
+      "account": "Lufthansa",
+      "date": "09-10-2019",
+      "level": "SAL1",
+      "priority": "H1",
+      "tenatative_date": "12-10-2019",
+      "tentative_fulfilment": "12-15-2019"
+    }
+  ],
+  "dotnet": [
+    {
+      "account": "Llyods",
+      "date": "09-10-2019",
+      "level": "SAL1",
+      "priority": "H1",
+      "tenatative_date": "10-10-2019",
+      "tentative_fulfilment": "10-15-2019"
+    },
+    {
+      "account": "USB",
+      "date": "09-10-2019",
+      "level": "SAL2",
+      "priority": "H2",
+      "tenatative_date": "09-10-2019",
+      "tentative_fulfilment": "09-15-2019"
+    },
+    {
+      "account": "Lufthansa",
+      "date": "09-10-2019",
+      "level": "SAL1",
+      "priority": "H1",
+      "tenatative_date": "12-10-2019",
+      "tentative_fulfilment": "12-15-2019"
+    }
+  ],
+  "iOS": [
+    {
+      "account": "Llyods",
+      "date": "09-10-2019",
+      "level": "SAL1",
+      "priority": "H1",
+      "tenatative_date": "10-10-2019",
+      "tentative_fulfilment": "10-15-2019"
+    },
+    {
+      "account": "USB",
+      "date": "09-10-2019",
+      "level": "SAL1",
+      "priority": "H2",
+      "tenatative_date": "10-10-2019",
+      "tentative_fulfilment": "11-15-2019"
+    },
+    {
+      "account": "Lufthansa",
+      "date": "09-10-2019",
+      "level": "SAL1",
+      "priority": "H1",
+      "tenatative_date": "10-10-2019",
+      "tentative_fulfilment": "11-20-2019"
+    }
+  ],
+  "java": [
+    {
+      "account": "Llyods",
+      "date": "09-10-2019",
+      "level": "SAL1",
+      "priority": "H1",
+      "tenatative_date": "10-10-2019",
+      "tentative_fulfilment": "10-15-2019"
+    },
+    {
+      "account": "USB",
+      "date": "09-10-2019",
+      "level": "SAL2",
+      "priority": "H2",
+      "tenatative_date": "09-10-2019",
+      "tentative_fulfilment": "09-15-2019"
+    },
+    {
+      "account": "Lufthansa",
+      "date": "09-10-2019",
+      "level": "SAL1",
+      "priority": "H1",
+      "tenatative_date": "12-10-2019",
+      "tentative_fulfilment": "12-15-2019"
+    }
+  ],
+  "javascript": [
+    {
+      "account": "Llyods",
+      "date": "09-10-2019",
+      "level": "SAL1",
+      "priority": "H1",
+      "tenatative_date": "10-10-2019",
+      "tentative_fulfilment": "10-15-2019"
+    },
+    {
+      "account": "USB",
+      "date": "09-10-2019",
+      "level": "SAL2",
+      "priority": "H2",
+      "tenatative_date": "09-10-2019",
+      "tentative_fulfilment": "09-15-2019"
+    },
+    {
+      "account": "Lufthansa",
+      "date": "09-10-2019",
+      "level": "SAL1",
+      "priority": "H1",
+      "tenatative_date": "12-10-2019",
+      "tentative_fulfilment": "12-15-2019"
+    }
+  ]
+}
