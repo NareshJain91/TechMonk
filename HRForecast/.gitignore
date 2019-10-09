@@ -17,7 +17,7 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 Podfile.lock*
-
+Pods/
 ## Other
 *.moved-aside
 *.xccheckout
