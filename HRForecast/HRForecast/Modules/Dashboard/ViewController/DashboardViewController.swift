@@ -9,7 +9,8 @@
 import UIKit
 import Charts
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: BaseViewController, UIBroker {
+    var payLoad: [String : Any]?
     
     lazy var viewModel = DashboardViewModel()
 

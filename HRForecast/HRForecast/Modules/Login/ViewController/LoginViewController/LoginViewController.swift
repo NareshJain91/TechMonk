@@ -11,7 +11,9 @@ import FirebaseAuth
 import Firebase
 import CodableFirebase
 
-class LoginViewController: BaseViewController {
+class LoginViewController: BaseViewController, UIBroker {
+    
+    var payLoad: [String : Any]?
     
     @IBOutlet weak var signInButton: UIButton!
     
@@ -111,14 +113,18 @@ extension LoginViewController {
         
         showActivityIndicator()
     
-        Auth.auth().signIn(withEmail: usernameTextfield.text!, password: passwordTextfield.text!) { [weak self] user, error in
-            self?.hideActivityIndicator()
-        guard let strongSelf = self else { return }
-
-            let alert = UIAlertController(title: "\(user)", message: "\(error)", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Click", style: .default, handler: nil))
-            strongSelf.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now()+2.0) {
+            self.hideActivityIndicator()
+            self.navigate(module: "dashboard", pushOrPresent: .push, payLoad: [:], pushPresentAnimated: false, schema: "Dashboard", completion: nil)
         }
+//        Auth.auth().signIn(withEmail: usernameTextfield.text!, password: passwordTextfield.text!) { [weak self] user, error in
+//            self?.hideActivityIndicator()
+//        guard let strongSelf = self else { return }
+//
+//            let alert = UIAlertController(title: "\(user)", message: "\(error)", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "Click", style: .default, handler: nil))
+//            strongSelf.present(alert, animated: true, completion: nil)
+//        }
     
     }
 

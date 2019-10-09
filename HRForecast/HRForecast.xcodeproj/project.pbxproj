@@ -20,6 +20,7 @@
 		4271187A234E0BB5000E77D7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711879234E0BB5000E77D7 /* BaseViewController.swift */; };
 		4271187F234E0C45000E77D7 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271187E234E0C45000E77D7 /* ActivityIndicatorView.swift */; };
 		42711881234E0C6C000E77D7 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711880234E0C6C000E77D7 /* LoadingIndicatorViewController.swift */; };
+		42711883234E1343000E77D7 /* Navigation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42711882234E1342000E77D7 /* Navigation.plist */; };
 		8182BD04234DD20A0031ED76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */; };
 		9E07D9BE234DB4FE00135FE0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9BD234DB4FE00135FE0 /* Constants.swift */; };
 		9E07D9C7234DD0D500135FE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9C3234DD0D500135FE0 /* LoginViewModel.swift */; };
@@ -49,6 +50,7 @@
 		42711879234E0BB5000E77D7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4271187E234E0C45000E77D7 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		42711880234E0C6C000E77D7 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
+		42711882234E1342000E77D7 /* Navigation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Navigation.plist; sourceTree = "<group>"; };
 		8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E07D9BD234DB4FE00135FE0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E07D9C3234DD0D500135FE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 		9ED17BD4234DD78D00DB7A43 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				42711882234E1342000E77D7 /* Navigation.plist */,
 				9ED17BD5234DD78D00DB7A43 /* MockJson */,
 			);
 			path = SupportingFiles;
@@ -402,6 +405,7 @@
 				9E1EFCC2234D863E005EE644 /* Main.storyboard in Resources */,
 				9ED17BD9234DD78D00DB7A43 /* accounts.json in Resources */,
 				8182BD04234DD20A0031ED76 /* GoogleService-Info.plist in Resources */,
+				42711883234E1343000E77D7 /* Navigation.plist in Resources */,
 				9ED17BD8234DD78D00DB7A43 /* skillSet.json in Resources */,
 				9E1EFCAC234D85E4005EE644 /* Assets.xcassets in Resources */,
 				9E1EFCC1234D863E005EE644 /* LaunchScreen.storyboard in Resources */,
