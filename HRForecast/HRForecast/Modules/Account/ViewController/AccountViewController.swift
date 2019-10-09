@@ -82,5 +82,6 @@ class AccountViewController: BaseViewController, UIBroker {
         chartView.xAxis.labelPosition = .bottom
        chartView.fitBars = true
        chartView.data = data
+        chartView.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .easeInCubic)
     }
 }
