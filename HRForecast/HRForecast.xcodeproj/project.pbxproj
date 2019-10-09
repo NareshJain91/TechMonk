@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8182BD04234DD20A0031ED76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */; };
 		9E1EFCAC234D85E4005EE644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCAB234D85E4005EE644 /* Assets.xcassets */; };
 		9E1EFCC0234D863E005EE644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EFCB9234D863E005EE644 /* AppDelegate.swift */; };
 		9E1EFCC1234D863E005EE644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCBB234D863E005EE644 /* LaunchScreen.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		10B8CAA22F6F0C97BBD5FA34 /* Pods_HRForecast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HRForecast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E1EFCA1234D85E3005EE644 /* HRForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HRForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1EFCAB234D85E4005EE644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E1EFCB0234D85E4005EE644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		9E1EFCA3234D85E3005EE644 /* HRForecast */ = {
 			isa = PBXGroup;
 			children = (
+				8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */,
 				9E59BE63234DA68700E8B270 /* NetworkManager */,
 				9E59BE49234D99E000E8B270 /* ViewControllers */,
 				9E59BE45234D97F300E8B270 /* ViewModels */,
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E1EFCC2234D863E005EE644 /* Main.storyboard in Resources */,
+				8182BD04234DD20A0031ED76 /* GoogleService-Info.plist in Resources */,
 				9E1EFCAC234D85E4005EE644 /* Assets.xcassets in Resources */,
 				9E1EFCC1234D863E005EE644 /* LaunchScreen.storyboard in Resources */,
 			);
