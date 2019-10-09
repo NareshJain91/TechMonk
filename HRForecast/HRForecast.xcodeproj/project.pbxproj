@@ -15,6 +15,8 @@
 		9E1EFCC2234D863E005EE644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCBD234D863E005EE644 /* Main.storyboard */; };
 		9E59BE4C234D99E000E8B270 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59BE4B234D99E000E8B270 /* DashboardViewController.swift */; };
 		9E59BE65234DA6A500E8B270 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59BE64234DA6A500E8B270 /* NetworkManager.swift */; };
+		9E59BE68234DAAB300E8B270 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59BE67234DAAB300E8B270 /* Constants.swift */; };
+		9E59BE6B234DACCB00E8B270 /* dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E59BE6A234DACCB00E8B270 /* dummy.json */; };
 		ED892DEED1FDA898DCF3B7BC /* Pods_HRForecast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B8CAA22F6F0C97BBD5FA34 /* Pods_HRForecast.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		9E1EFCBE234D863E005EE644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E59BE4B234D99E000E8B270 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		9E59BE64234DA6A500E8B270 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9E59BE67234DAAB300E8B270 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9E59BE6A234DACCB00E8B270 /* dummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dummy.json; sourceTree = "<group>"; };
 		D2E943906CCC2DAA077AB16D /* Pods-HRForecast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRForecast.release.xcconfig"; path = "Target Support Files/Pods-HRForecast/Pods-HRForecast.release.xcconfig"; sourceTree = "<group>"; };
 		F6F7E59642828619B7F24520 /* Pods-HRForecast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRForecast.debug.xcconfig"; path = "Target Support Files/Pods-HRForecast/Pods-HRForecast.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +131,22 @@
 			path = NetworkManager;
 			sourceTree = "<group>";
 		};
+		9E59BE66234DAAAA00E8B270 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9E59BE67234DAAB300E8B270 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		9E59BE69234DACA900E8B270 /* MockJson */ = {
+			isa = PBXGroup;
+			children = (
+				9E59BE6A234DACCB00E8B270 /* dummy.json */,
+			);
+			path = MockJson;
+			sourceTree = "<group>";
+		};
 		B16ED7B5F00822DA5AC42D9C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +229,7 @@
 			files = (
 				9E1EFCC2234D863E005EE644 /* Main.storyboard in Resources */,
 				9E1EFCAC234D85E4005EE644 /* Assets.xcassets in Resources */,
+				9E59BE6B234DACCB00E8B270 /* dummy.json in Resources */,
 				9E1EFCC1234D863E005EE644 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E59BE68234DAAB300E8B270 /* Constants.swift in Sources */,
 				9E59BE65234DA6A500E8B270 /* NetworkManager.swift in Sources */,
 				42711848234DAFD4000E77D7 /* DashboardViewModel.swift in Sources */,
 				9E1EFCC0234D863E005EE644 /* AppDelegate.swift in Sources */,
