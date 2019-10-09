@@ -7,17 +7,13 @@
 //
 
 import UIKit
-import Charts
 
 class DashboardViewController: UIViewController {
-    
-    lazy var dashboardViewModel = DashboardViewModel()
 
-    @IBOutlet weak var fulfillmentView: BarChartView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
-
+    
 }
 
