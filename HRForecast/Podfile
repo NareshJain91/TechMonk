@@ -8,6 +8,7 @@ target 'HRForecast' do
       pod 'Charts'
       pod 'Alamofire'
       pod 'SwiftyJSON'
-
+      pod 'Firebase/Analytics'
+      pod 'Firebase/Database'
     
 end
