@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42711848234DAFD4000E77D7 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711847234DAFD4000E77D7 /* DashboardViewModel.swift */; };
-		4271184F234DC6CC000E77D7 /* DashboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271184E234DC6CC000E77D7 /* DashboardWorker.swift */; };
-		42711852234DC7B7000E77D7 /* DashboardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711851234DC7B7000E77D7 /* DashboardDataModel.swift */; };
+		4271185C234DE6E1000E77D7 /* DashboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711857234DE6E1000E77D7 /* DashboardWorker.swift */; };
+		4271185D234DE6E1000E77D7 /* DashboardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711859234DE6E1000E77D7 /* DashboardDataModel.swift */; };
+		4271185E234DE6E1000E77D7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271185B234DE6E1000E77D7 /* DashboardViewController.swift */; };
+		42711861234DE82B000E77D7 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711860234DE82B000E77D7 /* DashboardViewModel.swift */; };
 		8182BD04234DD20A0031ED76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */; };
 		9E07D9BE234DB4FE00135FE0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9BD234DB4FE00135FE0 /* Constants.swift */; };
 		9E07D9C7234DD0D500135FE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9C3234DD0D500135FE0 /* LoginViewModel.swift */; };
 		9E07D9C8234DD0D500135FE0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9C6234DD0D500135FE0 /* LoginViewController.swift */; };
-		9E07D9D0234DD14800135FE0 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9CC234DD14800135FE0 /* DashboardViewModel.swift */; };
-		9E07D9D1234DD14800135FE0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9CF234DD14800135FE0 /* DashboardViewController.swift */; };
 		9E1EFCAC234D85E4005EE644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCAB234D85E4005EE644 /* Assets.xcassets */; };
 		9E1EFCC0234D863E005EE644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EFCB9234D863E005EE644 /* AppDelegate.swift */; };
 		9E1EFCC1234D863E005EE644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCBB234D863E005EE644 /* LaunchScreen.storyboard */; };
@@ -28,15 +27,14 @@
 
 /* Begin PBXFileReference section */
 		10B8CAA22F6F0C97BBD5FA34 /* Pods_HRForecast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HRForecast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		42711847234DAFD4000E77D7 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
-		4271184E234DC6CC000E77D7 /* DashboardWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWorker.swift; sourceTree = "<group>"; };
-		42711851234DC7B7000E77D7 /* DashboardDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDataModel.swift; sourceTree = "<group>"; };
+		42711857234DE6E1000E77D7 /* DashboardWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardWorker.swift; sourceTree = "<group>"; };
+		42711859234DE6E1000E77D7 /* DashboardDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardDataModel.swift; sourceTree = "<group>"; };
+		4271185B234DE6E1000E77D7 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		42711860234DE82B000E77D7 /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E07D9BD234DB4FE00135FE0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E07D9C3234DD0D500135FE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9E07D9C6234DD0D500135FE0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		9E07D9CC234DD14800135FE0 /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
-		9E07D9CF234DD14800135FE0 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		9E1EFCA1234D85E3005EE644 /* HRForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HRForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1EFCAB234D85E4005EE644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E1EFCB0234D85E4005EE644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,13 +60,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42711855234DE6E1000E77D7 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				4271185F234DE82B000E77D7 /* ViewModel */,
+				42711856234DE6E1000E77D7 /* Workers */,
+				42711858234DE6E1000E77D7 /* DataModel */,
+				4271185A234DE6E1000E77D7 /* ViewController */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		42711856234DE6E1000E77D7 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				42711857234DE6E1000E77D7 /* DashboardWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		42711858234DE6E1000E77D7 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				42711859234DE6E1000E77D7 /* DashboardDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		4271185A234DE6E1000E77D7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4271185B234DE6E1000E77D7 /* DashboardViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4271185F234DE82B000E77D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42711860234DE82B000E77D7 /* DashboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9E07D9BC234DB4FE00135FE0 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				42711850234DC79D000E77D7 /* DataModel */,
-				4271184D234DC6BD000E77D7 /* Workers */,
-				42711846234DAFC5000E77D7 /* ViewModel */,
-				42711845234DAFAB000E77D7 /* ViewController */,
 				9E07D9BD234DB4FE00135FE0 /* Constants.swift */,
 			);
 			path = Constants;
@@ -77,7 +114,7 @@
 		9E07D9BF234DD0D500135FE0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				9E07D9C9234DD14800135FE0 /* Dashboard */,
+				42711855234DE6E1000E77D7 /* Dashboard */,
 				9E07D9C0234DD0D500135FE0 /* Login */,
 			);
 			path = Modules;
@@ -122,61 +159,6 @@
 				9E07D9C6234DD0D500135FE0 /* LoginViewController.swift */,
 			);
 			path = LoginViewController;
-			sourceTree = "<group>";
-		};
-		9E07D9C9234DD14800135FE0 /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				9E07D9CA234DD14800135FE0 /* ViewModel */,
-				9E07D9CD234DD14800135FE0 /* ViewController */,
-			);
-			path = Dashboard;
-			sourceTree = "<group>";
-		};
-		9E07D9CA234DD14800135FE0 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				9E07D9CB234DD14800135FE0 /* DashboardViewModel */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		4271184D234DC6BD000E77D7 /* Workers */ = {
-			isa = PBXGroup;
-			children = (
-				4271184E234DC6CC000E77D7 /* DashboardWorker.swift */,
-			);
-			path = Workers;
-			sourceTree = "<group>";
-		};
-		42711850234DC79D000E77D7 /* DataModel */ = {
-			isa = PBXGroup;
-			children = (
-				42711851234DC7B7000E77D7 /* DashboardDataModel.swift */,
-			);
-			path = DataModel;
-		9E07D9CB234DD14800135FE0 /* DashboardViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				9E07D9CC234DD14800135FE0 /* DashboardViewModel.swift */,
-			);
-			path = DashboardViewModel;
-			sourceTree = "<group>";
-		};
-		9E07D9CD234DD14800135FE0 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				9E07D9CE234DD14800135FE0 /* DashboardViewController */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		9E07D9CE234DD14800135FE0 /* DashboardViewController */ = {
-			isa = PBXGroup;
-			children = (
-				9E07D9CF234DD14800135FE0 /* DashboardViewController.swift */,
-			);
-			path = DashboardViewController;
 			sourceTree = "<group>";
 		};
 		9E1EFC98234D85E3005EE644 = {
@@ -393,15 +375,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E07D9C7234DD0D500135FE0 /* LoginViewModel.swift in Sources */,
-				9E07D9D1234DD14800135FE0 /* DashboardViewController.swift in Sources */,
 				9E59BE65234DA6A500E8B270 /* NetworkManager.swift in Sources */,
-				42711848234DAFD4000E77D7 /* DashboardViewModel.swift in Sources */,
-				42711852234DC7B7000E77D7 /* DashboardDataModel.swift in Sources */,
-				4271184F234DC6CC000E77D7 /* DashboardWorker.swift in Sources */,
+				4271185C234DE6E1000E77D7 /* DashboardWorker.swift in Sources */,
+				42711861234DE82B000E77D7 /* DashboardViewModel.swift in Sources */,
 				9E1EFCC0234D863E005EE644 /* AppDelegate.swift in Sources */,
-				9E07D9D0234DD14800135FE0 /* DashboardViewModel.swift in Sources */,
 				9E07D9C8234DD0D500135FE0 /* LoginViewController.swift in Sources */,
 				9E07D9BE234DB4FE00135FE0 /* Constants.swift in Sources */,
+				4271185D234DE6E1000E77D7 /* DashboardDataModel.swift in Sources */,
+				4271185E234DE6E1000E77D7 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
