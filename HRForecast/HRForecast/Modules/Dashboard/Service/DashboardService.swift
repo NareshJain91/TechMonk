@@ -15,7 +15,7 @@ class DashboardService: BaseService {
         super.init()
 
         if let baseURL = BaseService.baseUrl {
-            requestURL = baseURL + Constants.Url.accountsAPI
+            requestURL = baseURL + DashboardConstants.Url.accountsAPI
         }
 
         self.requestType = .GET

@@ -11,12 +11,5 @@ import Foundation
 struct Constants {
 
     static let baseURL = "https://hrforecast-9141e.firebaseio.com"
-    
-    struct Url {
-        static let accountsAPI = "/accounts.json"
-        static let skillSetAPI = "/skillSet.json"
-        static let profileAPI = "/profiles.json"
-        static let candidateAPI = "/candidates.json"
-    }
 }
 

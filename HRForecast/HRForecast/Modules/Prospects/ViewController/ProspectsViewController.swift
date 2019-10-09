@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import Charts
 
 class ProspectsViewController: BaseViewController, UIBroker {
     
     var payLoad: [String : Any]?
 
+    @IBOutlet weak var chartView: BarChartView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = DashboardConstants.title
     }
     
 }

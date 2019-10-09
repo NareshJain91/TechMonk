@@ -14,22 +14,35 @@ class DashboardViewController: BaseViewController, UIBroker {
 
     lazy var dashboardViewModel = DashboardViewModel()
 
-    @IBOutlet weak var barChartView: BarChartView!
+    @IBOutlet weak var barChartView: BarChartView! {
+        didSet {
+            barChartView.noDataText = "You need to provide data for the chart."
+            barChartView.delegate = self
+        }
+    }
     
     override func viewDidLoad() {
-        barChartView.noDataText = "You need to provide data for the chart."
         
-        barChartView.delegate = self
+        title = DashboardConstants.title
+        self.hideBackButton()
+        self.setNavigationBarColor(Theme.primaryColor, textColor: Theme.primaryTextColor)
+        self.setNavigationBarHidden(animaed: false, false)
         
-        dashboardViewModel.getDashboardData { (error) in
+        showActivityIndicator()
+        dashboardViewModel.getDashboardData {[weak self] (error) in
+            self?.hideActivityIndicator()
             guard error == nil else {
                 return
             }
-            self.setUpGroupBar()
+            self?.setUpGroupBar()
         }
     }
-}
     
+    @IBAction func prospectsButtonClicked(_ sender: Any) {
+        navigate(module: "prospects", pushOrPresent: .push, payLoad: [:],
+                 pushPresentAnimated: false, schema: "Dashboard", completion: nil)
+    }
+}
 
 extension DashboardViewController: ChartViewDelegate {
 

@@ -9,6 +9,8 @@
 import Foundation
 
 struct ProspectsConstants {
+    
+    static let title = "Prospects"
 
     struct Url {
         static let skillSetsAPI = Constants.baseURL + "/skillSet.json"

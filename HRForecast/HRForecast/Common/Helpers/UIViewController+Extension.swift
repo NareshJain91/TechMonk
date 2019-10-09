@@ -18,8 +18,8 @@ public extension UIViewController {
         self.navigationItem.hidesBackButton = true
     }
 
-    func setNavigationBarHidden(animaed: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animaed)
+    func setNavigationBarHidden(animaed: Bool, _ hidden: Bool = true) {
+        self.navigationController?.setNavigationBarHidden(hidden, animated: animaed)
     }
 
     func setTranslucentNavigationBar() {
@@ -37,6 +37,9 @@ public extension UIViewController {
         if let color = textColor, let textfont = font {
             let attributes = [NSAttributedString.Key.foregroundColor: color,
                               NSAttributedString.Key.font: textfont]
+            self.navigationController?.navigationBar.titleTextAttributes = attributes
+        } else if let color = textColor {
+            let attributes = [NSAttributedString.Key.foregroundColor: color]
             self.navigationController?.navigationBar.titleTextAttributes = attributes
         }
     }

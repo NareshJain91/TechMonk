@@ -21,7 +21,7 @@ class LoginViewController: BaseViewController, UIBroker {
         didSet {
             passwordTextfield.layer.borderWidth = 1.0
             passwordTextfield.layer.cornerRadius = 5.0
-            passwordTextfield.layer.borderColor = UIColor(red:1.00, green:0.25, blue:0.30, alpha:0.7).cgColor
+            passwordTextfield.layer.borderColor = Theme.primaryColor.cgColor
         }
     }
     
@@ -29,7 +29,7 @@ class LoginViewController: BaseViewController, UIBroker {
         didSet {
             usernameTextfield.layer.borderWidth = 1.0
             usernameTextfield.layer.cornerRadius = 5.0
-            usernameTextfield.layer.borderColor = UIColor(red:1.00, green:0.25, blue:0.30, alpha:0.7).cgColor
+            usernameTextfield.layer.borderColor = Theme.primaryColor.cgColor
         }
     }
     
@@ -37,7 +37,7 @@ class LoginViewController: BaseViewController, UIBroker {
         didSet {
             SignUpButton.layer.borderWidth = 1.0
             SignUpButton.layer.cornerRadius = 5.0
-            SignUpButton.layer.borderColor = UIColor(red:0.03, green:0.62, blue:1.00, alpha:0.7).cgColor
+            SignUpButton.layer.borderColor = Theme.secondaryColor.cgColor
         }
     }
     @IBOutlet weak var signupPicker: UIPickerView!
@@ -50,6 +50,7 @@ class LoginViewController: BaseViewController, UIBroker {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setNavigationBarHidden(animaed: false)
         reference = Database.database().reference()
         self.reference!.child("profiles").observe(.value, with: { (snapshot) in
             guard let value = snapshot.value else { return }
@@ -115,6 +116,7 @@ extension LoginViewController {
     
         DispatchQueue.main.asyncAfter(deadline: .now()+2.0) {
             self.hideActivityIndicator()
+            self.setNavigationBarHidden(animaed: false)
             self.navigate(module: "dashboard", pushOrPresent: .push, payLoad: [:], pushPresentAnimated: false, schema: "Dashboard", completion: nil)
         }
 //        Auth.auth().signIn(withEmail: usernameTextfield.text!, password: passwordTextfield.text!) { [weak self] user, error in

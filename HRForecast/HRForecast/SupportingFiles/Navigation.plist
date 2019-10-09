@@ -6,6 +6,8 @@
 	<dict>
 		<key>dashboard</key>
 		<string>Main.DashboardViewController</string>
+		<key>prospects</key>
+		<string>Main.ProspectsViewController</string>
 	</dict>
 </dict>
 </plist>
