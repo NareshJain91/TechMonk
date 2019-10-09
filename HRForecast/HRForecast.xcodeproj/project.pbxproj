@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		42711842234D9541000E77D7 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 42711841234D9541000E77D7 /* Charts */; };
+		42711848234DAFD4000E77D7 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711847234DAFD4000E77D7 /* DashboardViewModel.swift */; };
 		9E1EFCAC234D85E4005EE644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCAB234D85E4005EE644 /* Assets.xcassets */; };
 		9E1EFCC0234D863E005EE644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EFCB9234D863E005EE644 /* AppDelegate.swift */; };
 		9E1EFCC1234D863E005EE644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCBB234D863E005EE644 /* LaunchScreen.storyboard */; };
 		9E1EFCC2234D863E005EE644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCBD234D863E005EE644 /* Main.storyboard */; };
-		9E59BE48234D99A900E8B270 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59BE47234D99A900E8B270 /* DashboardViewModel.swift */; };
 		9E59BE4C234D99E000E8B270 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59BE4B234D99E000E8B270 /* DashboardViewController.swift */; };
 		9E59BE65234DA6A500E8B270 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59BE64234DA6A500E8B270 /* NetworkManager.swift */; };
 		ED892DEED1FDA898DCF3B7BC /* Pods_HRForecast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B8CAA22F6F0C97BBD5FA34 /* Pods_HRForecast.framework */; };
@@ -20,13 +20,13 @@
 
 /* Begin PBXFileReference section */
 		10B8CAA22F6F0C97BBD5FA34 /* Pods_HRForecast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HRForecast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42711847234DAFD4000E77D7 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		9E1EFCA1234D85E3005EE644 /* HRForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HRForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1EFCAB234D85E4005EE644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E1EFCB0234D85E4005EE644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E1EFCB9234D863E005EE644 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E1EFCBC234D863E005EE644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E1EFCBE234D863E005EE644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9E59BE47234D99A900E8B270 /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		9E59BE4B234D99E000E8B270 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		9E59BE64234DA6A500E8B270 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D2E943906CCC2DAA077AB16D /* Pods-HRForecast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRForecast.release.xcconfig"; path = "Target Support Files/Pods-HRForecast/Pods-HRForecast.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,6 +46,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42711843234DAF8D000E77D7 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				42711846234DAFC5000E77D7 /* ViewModel */,
+				42711845234DAFAB000E77D7 /* ViewController */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		42711845234DAFAB000E77D7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9E59BE4B234D99E000E8B270 /* DashboardViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		42711846234DAFC5000E77D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42711847234DAFD4000E77D7 /* DashboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9E1EFC98234D85E3005EE644 = {
 			isa = PBXGroup;
 			children = (
@@ -67,9 +92,8 @@
 		9E1EFCA3234D85E3005EE644 /* HRForecast */ = {
 			isa = PBXGroup;
 			children = (
+				42711843234DAF8D000E77D7 /* Dashboard */,
 				9E59BE63234DA68700E8B270 /* NetworkManager */,
-				9E59BE49234D99E000E8B270 /* ViewControllers */,
-				9E59BE45234D97F300E8B270 /* ViewModels */,
 				9E1EFCBA234D863E005EE644 /* UserInterface */,
 				9E1EFCB8234D863E005EE644 /* AppDelegate */,
 				9E1EFCAB234D85E4005EE644 /* Assets.xcassets */,
@@ -93,38 +117,6 @@
 				9E1EFCBD234D863E005EE644 /* Main.storyboard */,
 			);
 			path = UserInterface;
-			sourceTree = "<group>";
-		};
-		9E59BE45234D97F300E8B270 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				9E59BE46234D99A900E8B270 /* DashboardViewModel */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		9E59BE46234D99A900E8B270 /* DashboardViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				9E59BE47234D99A900E8B270 /* DashboardViewModel.swift */,
-			);
-			path = DashboardViewModel;
-			sourceTree = "<group>";
-		};
-		9E59BE49234D99E000E8B270 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				9E59BE4A234D99E000E8B270 /* DashboardViewController */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		9E59BE4A234D99E000E8B270 /* DashboardViewController */ = {
-			isa = PBXGroup;
-			children = (
-				9E59BE4B234D99E000E8B270 /* DashboardViewController.swift */,
-			);
-			path = DashboardViewController;
 			sourceTree = "<group>";
 		};
 		9E59BE63234DA68700E8B270 /* NetworkManager */ = {
@@ -271,8 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E59BE65234DA6A500E8B270 /* NetworkManager.swift in Sources */,
+				42711848234DAFD4000E77D7 /* DashboardViewModel.swift in Sources */,
 				9E1EFCC0234D863E005EE644 /* AppDelegate.swift in Sources */,
-				9E59BE48234D99A900E8B270 /* DashboardViewModel.swift in Sources */,
 				9E59BE4C234D99E000E8B270 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
