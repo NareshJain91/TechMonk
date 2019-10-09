@@ -11,6 +11,15 @@
 		4271185D234DE6E1000E77D7 /* DashboardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711859234DE6E1000E77D7 /* DashboardDataModel.swift */; };
 		4271185E234DE6E1000E77D7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271185B234DE6E1000E77D7 /* DashboardViewController.swift */; };
 		42711861234DE82B000E77D7 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711860234DE82B000E77D7 /* DashboardViewModel.swift */; };
+		4271186A234E0936000E77D7 /* USBNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711868234E0936000E77D7 /* USBNavigator.swift */; };
+		4271186B234E0936000E77D7 /* UIBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711869234E0936000E77D7 /* UIBroker.swift */; };
+		4271186E234E095F000E77D7 /* LogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271186D234E095F000E77D7 /* LogUtil.swift */; };
+		42711871234E0A0A000E77D7 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711870234E0A0A000E77D7 /* UIViewController+Extension.swift */; };
+		42711873234E0AD5000E77D7 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711872234E0AD5000E77D7 /* NSObject+Extension.swift */; };
+		42711877234E0B4E000E77D7 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711876234E0B4E000E77D7 /* GlobalConstants.swift */; };
+		4271187A234E0BB5000E77D7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711879234E0BB5000E77D7 /* BaseViewController.swift */; };
+		4271187F234E0C45000E77D7 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271187E234E0C45000E77D7 /* ActivityIndicatorView.swift */; };
+		42711881234E0C6C000E77D7 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42711880234E0C6C000E77D7 /* LoadingIndicatorViewController.swift */; };
 		8182BD04234DD20A0031ED76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */; };
 		9E07D9BE234DB4FE00135FE0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9BD234DB4FE00135FE0 /* Constants.swift */; };
 		9E07D9C7234DD0D500135FE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E07D9C3234DD0D500135FE0 /* LoginViewModel.swift */; };
@@ -31,6 +40,15 @@
 		42711859234DE6E1000E77D7 /* DashboardDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardDataModel.swift; sourceTree = "<group>"; };
 		4271185B234DE6E1000E77D7 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		42711860234DE82B000E77D7 /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		42711868234E0936000E77D7 /* USBNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USBNavigator.swift; sourceTree = "<group>"; };
+		42711869234E0936000E77D7 /* UIBroker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBroker.swift; sourceTree = "<group>"; };
+		4271186D234E095F000E77D7 /* LogUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogUtil.swift; sourceTree = "<group>"; };
+		42711870234E0A0A000E77D7 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		42711872234E0AD5000E77D7 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		42711876234E0B4E000E77D7 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		42711879234E0BB5000E77D7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4271187E234E0C45000E77D7 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		42711880234E0C6C000E77D7 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
 		8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E07D9BD234DB4FE00135FE0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E07D9C3234DD0D500135FE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -101,6 +119,70 @@
 				42711860234DE82B000E77D7 /* DashboardViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		42711862234E08B3000E77D7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				42711875234E0B42000E77D7 /* Constants */,
+				4271186F234E0A0A000E77D7 /* Helpers */,
+				4271186C234E0940000E77D7 /* Log */,
+				42711867234E0936000E77D7 /* Navigation */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		42711867234E0936000E77D7 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				42711868234E0936000E77D7 /* USBNavigator.swift */,
+				42711869234E0936000E77D7 /* UIBroker.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		4271186C234E0940000E77D7 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				4271186D234E095F000E77D7 /* LogUtil.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		4271186F234E0A0A000E77D7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				42711878234E0BAB000E77D7 /* UI */,
+				42711870234E0A0A000E77D7 /* UIViewController+Extension.swift */,
+				42711872234E0AD5000E77D7 /* NSObject+Extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		42711875234E0B42000E77D7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				42711876234E0B4E000E77D7 /* GlobalConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		42711878234E0BAB000E77D7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4271187D234E0C38000E77D7 /* LoadingIndicator */,
+				42711879234E0BB5000E77D7 /* BaseViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4271187D234E0C38000E77D7 /* LoadingIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				42711880234E0C6C000E77D7 /* LoadingIndicatorViewController.swift */,
+				4271187E234E0C45000E77D7 /* ActivityIndicatorView.swift */,
+			);
+			path = LoadingIndicator;
 			sourceTree = "<group>";
 		};
 		9E07D9BC234DB4FE00135FE0 /* Constants */ = {
@@ -182,6 +264,7 @@
 		9E1EFCA3234D85E3005EE644 /* HRForecast */ = {
 			isa = PBXGroup;
 			children = (
+				42711862234E08B3000E77D7 /* Common */,
 				9ED17BD4234DD78D00DB7A43 /* SupportingFiles */,
 				8182BD03234DD20A0031ED76 /* GoogleService-Info.plist */,
 				9E07D9BF234DD0D500135FE0 /* Modules */,
@@ -375,14 +458,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E07D9C7234DD0D500135FE0 /* LoginViewModel.swift in Sources */,
+				42711881234E0C6C000E77D7 /* LoadingIndicatorViewController.swift in Sources */,
+				42711871234E0A0A000E77D7 /* UIViewController+Extension.swift in Sources */,
 				9E59BE65234DA6A500E8B270 /* NetworkManager.swift in Sources */,
+				4271186A234E0936000E77D7 /* USBNavigator.swift in Sources */,
 				4271185C234DE6E1000E77D7 /* DashboardWorker.swift in Sources */,
+				4271186E234E095F000E77D7 /* LogUtil.swift in Sources */,
 				42711861234DE82B000E77D7 /* DashboardViewModel.swift in Sources */,
+				42711877234E0B4E000E77D7 /* GlobalConstants.swift in Sources */,
 				9E1EFCC0234D863E005EE644 /* AppDelegate.swift in Sources */,
+				4271186B234E0936000E77D7 /* UIBroker.swift in Sources */,
 				9E07D9C8234DD0D500135FE0 /* LoginViewController.swift in Sources */,
 				9E07D9BE234DB4FE00135FE0 /* Constants.swift in Sources */,
 				4271185D234DE6E1000E77D7 /* DashboardDataModel.swift in Sources */,
+				4271187A234E0BB5000E77D7 /* BaseViewController.swift in Sources */,
+				4271187F234E0C45000E77D7 /* ActivityIndicatorView.swift in Sources */,
 				4271185E234DE6E1000E77D7 /* DashboardViewController.swift in Sources */,
+				42711873234E0AD5000E77D7 /* NSObject+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

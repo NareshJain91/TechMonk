@@ -11,8 +11,7 @@ import FirebaseAuth
 import Firebase
 import CodableFirebase
 
-
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     @IBOutlet weak var signInButton: UIButton!
     
@@ -80,16 +79,19 @@ extension LoginViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerView.isHidden = true
+        showActivityIndicator()
         Auth.auth().createUser(withEmail:usernameTextfield.text!, password: passwordTextfield.text!) { [weak self] user, error in
+            self?.hideActivityIndicator()
                     guard let strongSelf = self else { return }
-                
+
                     guard let firebaseUser = user?.user else {return}
-        
+
                     var fullNameArr = firebaseUser.email?.components(separatedBy: "@")
                     var firstName: String = fullNameArr![0]
                     var lastName: String? = fullNameArr!.count > 1 ? fullNameArr![1] : nil
                 let user = User(username: firstName, email: firebaseUser.email!, type: self!.profiles[strongSelf.signupPicker.selectedRow(inComponent: 0)])
-                           
+
                 let data = try! FirebaseEncoder().encode(user)
                 self!.reference!.child("users").child(firebaseUser.uid).setValue(data);
                 let alert = UIAlertController(title: "SignUp Success", message: "", preferredStyle: .alert)
@@ -107,9 +109,10 @@ extension LoginViewController {
     
     @IBAction func signInButtonAction(_ sender: UIButton) {
         
-//        Signin
+        showActivityIndicator()
     
         Auth.auth().signIn(withEmail: usernameTextfield.text!, password: passwordTextfield.text!) { [weak self] user, error in
+            self?.hideActivityIndicator()
         guard let strongSelf = self else { return }
 
             let alert = UIAlertController(title: "\(user)", message: "\(error)", preferredStyle: .alert)
