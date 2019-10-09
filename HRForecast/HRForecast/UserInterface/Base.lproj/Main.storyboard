@@ -39,7 +39,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="bDB-q5-BGn"/>
                                 </constraints>
-                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
@@ -48,12 +48,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="IAi-dX-WRU"/>
                                 </constraints>
-                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrgLogo" translatesAutoresizingMaskIntoConstraints="NO" id="GVX-aI-gob">
-                                <rect key="frame" x="995" y="1040" width="107" height="62"/>
+                                <rect key="frame" x="995" y="978" width="214" height="124"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oo-zM-KTg">
                                 <rect key="frame" x="317" y="560" width="200" height="56"/>
@@ -84,17 +84,17 @@
                             </button>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vmf-Vo-9sA">
                                 <rect key="frame" x="0.0" y="870" width="834" height="242"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="e3X-gn-Lqr"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Cja-Lh-EkX"/>
                                 </connections>
                             </pickerView>
                             <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="gBE-fF-gHD">
-                                <rect key="frame" x="248.5" y="44" width="337" height="140"/>
+                                <rect key="frame" x="165.5" y="44" width="503" height="140"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Buddy" translatesAutoresizingMaskIntoConstraints="NO" id="wlB-bq-XSy">
-                                        <rect key="frame" x="200" y="100" width="166" height="120"/>
+                                        <rect key="frame" x="200" y="100" width="332" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="OXy-T1-UCz"/>
                                         </constraints>
@@ -155,6 +155,38 @@
             </objects>
             <point key="canvasLocation" x="-404.136690647482" y="16.546762589928058"/>
         </scene>
+        <!--Account View Controller-->
+        <scene sceneID="SEk-Ys-daT">
+            <objects>
+                <viewController storyboardIdentifier="AccountViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zlw-0w-5d3" customClass="AccountViewController" customModule="HRForecast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Je-mZ-yto">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="BarChartView" translatesAutoresizingMaskIntoConstraints="NO" id="xuk-hV-7bG" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="117" y="256" width="600" height="600"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Jtm-ST-5Zn"/>
+                                    <constraint firstAttribute="height" constant="600" id="N9S-bM-fpf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xuk-hV-7bG" firstAttribute="centerY" secondItem="6Je-mZ-yto" secondAttribute="centerY" id="L4R-ps-t0y"/>
+                            <constraint firstItem="xuk-hV-7bG" firstAttribute="centerX" secondItem="6Je-mZ-yto" secondAttribute="centerX" id="TZR-D9-IQY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gl5-6T-qpG"/>
+                    </view>
+                    <connections>
+                        <outlet property="chartView" destination="xuk-hV-7bG" id="8NA-d7-ep1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxH-ef-Slq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="0.0"/>
+        </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="Zmw-v4-jCN">
             <objects>
@@ -172,11 +204,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS6-PW-Y7s">
-                                <rect key="frame" x="267" y="956" width="300" height="54"/>
+                                <rect key="frame" x="117" y="956" width="290" height="54"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.25490196079999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="UAC-f4-c8r"/>
-                                    <constraint firstAttribute="width" constant="300" id="Xu2-5S-sxt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Prospects View">
@@ -186,13 +217,31 @@
                                     <action selector="prospectsButtonClicked:" destination="9Ci-qT-Vq5" eventType="touchUpInside" id="PVt-Ht-shQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCn-Z9-iB0">
+                                <rect key="frame" x="427" y="956" width="290" height="54"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.25490196079999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="AEF-OK-1zI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Account View">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="accountButtonClicked:" destination="9Ci-qT-Vq5" eventType="touchUpInside" id="QiT-ra-HnJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rS6-PW-Y7s" firstAttribute="centerX" secondItem="bUk-Pv-IJ6" secondAttribute="centerX" id="Fm5-y7-BsQ"/>
+                            <constraint firstItem="fCn-Z9-iB0" firstAttribute="trailing" secondItem="d0f-37-lHa" secondAttribute="trailing" id="4MV-dk-Pde"/>
+                            <constraint firstItem="fCn-Z9-iB0" firstAttribute="top" secondItem="d0f-37-lHa" secondAttribute="bottom" constant="100" id="7LE-CH-wms"/>
                             <constraint firstItem="rS6-PW-Y7s" firstAttribute="top" secondItem="d0f-37-lHa" secondAttribute="bottom" constant="100" id="Hwl-Pu-A6t"/>
+                            <constraint firstItem="rS6-PW-Y7s" firstAttribute="leading" secondItem="d0f-37-lHa" secondAttribute="leading" id="KJN-Eh-t57"/>
                             <constraint firstItem="d0f-37-lHa" firstAttribute="centerY" secondItem="bUk-Pv-IJ6" secondAttribute="centerY" id="UCx-mK-vqB"/>
                             <constraint firstItem="d0f-37-lHa" firstAttribute="centerX" secondItem="bUk-Pv-IJ6" secondAttribute="centerX" id="WwI-NU-lw1"/>
+                            <constraint firstItem="fCn-Z9-iB0" firstAttribute="width" secondItem="rS6-PW-Y7s" secondAttribute="width" id="f2K-WD-Bb6"/>
+                            <constraint firstItem="fCn-Z9-iB0" firstAttribute="leading" secondItem="rS6-PW-Y7s" secondAttribute="trailing" constant="20" id="lbD-6Z-TXk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bUk-Pv-IJ6"/>
                     </view>
@@ -202,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxE-2Y-fa1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="275" y="0.0"/>
+            <point key="canvasLocation" x="274.8201438848921" y="0.0"/>
         </scene>
         <!--Prospects View Controller-->
         <scene sceneID="o7z-IQ-WUc">

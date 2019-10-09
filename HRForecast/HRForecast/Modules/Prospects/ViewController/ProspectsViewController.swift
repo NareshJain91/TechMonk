@@ -68,10 +68,10 @@ class ProspectsViewController: BaseViewController, UIBroker {
            return BarChartDataEntry(x: Double(i), yValues: [val1, val2, val3])
        }
        
-       let set = BarChartDataSet(entries: yVals, label: "Prospect View")
+       let set = BarChartDataSet(entries: yVals, label: "")
        set.drawIconsEnabled = false
        set.colors = [ChartColorTemplates.material()[0], ChartColorTemplates.material()[1], ChartColorTemplates.material()[2]]
-        set.stackLabels = viewModel.yAxisLabels()
+        set.stackLabels = ["iOS","Android","Java"]
        
        let data = BarChartData(dataSet: set)
        data.setValueFont(.systemFont(ofSize: 7, weight: .light))

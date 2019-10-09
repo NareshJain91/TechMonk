@@ -13,7 +13,7 @@ class AccountViewController: BaseViewController, UIBroker {
     
     var payLoad: [String : Any]?
 
-    @IBOutlet weak var lineChartView: LineChartView!
+    @IBOutlet weak var chartView: BarChartView!
     
     lazy var viewModel = ProspectsViewModel()
     
@@ -28,44 +28,59 @@ class AccountViewController: BaseViewController, UIBroker {
             self?.hideActivityIndicator()
             self?.updateChartData()
         }
+        
+        chartView.chartDescription?.enabled = false
+                
+        chartView.maxVisibleCount = 40
+        chartView.drawBarShadowEnabled = false
+        chartView.drawValueAboveBarEnabled = false
+        chartView.highlightFullBarEnabled = false
+        
+        let leftAxis = chartView.leftAxis
+        leftAxis.axisMinimum = 0
+        
+        chartView.rightAxis.enabled = false
+        
+        let xAxis = chartView.xAxis
+        xAxis.labelPosition = .top
+        
+        let l = chartView.legend
+        l.horizontalAlignment = .right
+        l.verticalAlignment = .bottom
+        l.orientation = .horizontal
+        l.drawInside = false
+        l.form = .square
+        l.formToTextSpace = 4
+        l.xEntrySpace = 6
     }
     
     func updateChartData() {
-        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
-        let unitsSold = [50.0, 25.0, 50.0, 75.0, 100.0, 75.0]
-
-        self.setChart(dataPoints: months, values: unitsSold)
+        self.setChartData(count: Int(6), range: UInt32(20))
     }
     
-    func setChart(dataPoints: [String], values: [Double]) {
-        var dataEntries: [ChartDataEntry] = []
-
-        for i in 0..<dataPoints.count {
-            let dataEntry = ChartDataEntry(x: Double(i), y: values[i], data: dataPoints[i] as AnyObject)
-            dataEntries.append(dataEntry)
-        }
-
-        let chartDataSet = LineChartDataSet(entries: dataEntries, label: nil)
-        chartDataSet.circleRadius = 5
-        chartDataSet.circleHoleRadius = 2
-        chartDataSet.drawValuesEnabled = false
-
-        let chartData = LineChartData(dataSets: [chartDataSet])
-
-
-        lineChartView.data = chartData
-
-        lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: dataPoints)
-        lineChartView.xAxis.labelPosition = .bottom
-        lineChartView.xAxis.drawGridLinesEnabled = false
-        lineChartView.xAxis.avoidFirstLastClippingEnabled = true
-
-        lineChartView.rightAxis.drawAxisLineEnabled = false
-        lineChartView.rightAxis.drawLabelsEnabled = false
-
-        lineChartView.leftAxis.drawAxisLineEnabled = false
-        lineChartView.pinchZoomEnabled = false
-        lineChartView.doubleTapToZoomEnabled = false
-        lineChartView.legend.enabled = false
+    func setChartData(count: Int, range: UInt32) {
+       let yVals = (0..<count).map { (i) -> BarChartDataEntry in
+           let mult = range + 1
+           let val1 = Double(arc4random_uniform(mult) + mult / 3)
+           let val2 = Double(arc4random_uniform(mult) + mult / 3)
+           let val3 = Double(arc4random_uniform(mult) + mult / 3)
+           
+           return BarChartDataEntry(x: Double(i), yValues: [val1, val2, val3])
+       }
+       
+       let set = BarChartDataSet(entries: yVals, label: "")
+       set.drawIconsEnabled = false
+       set.colors = [ChartColorTemplates.material()[0], ChartColorTemplates.material()[1], ChartColorTemplates.material()[2]]
+        set.stackLabels = ["Llyods","Lufthansa","USB"]
+       
+       let data = BarChartData(dataSet: set)
+       data.setValueFont(.systemFont(ofSize: 7, weight: .light))
+       data.setValueTextColor(.white)
+        
+        let months = ["10th Oct", "11th Oct", "12th Oct", "13th Oct", "14th Oct", "15th Oct"]
+        chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:months)
+        chartView.xAxis.labelPosition = .bottom
+       chartView.fitBars = true
+       chartView.data = data
     }
 }

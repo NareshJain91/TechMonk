@@ -11,9 +11,9 @@ import Charts
 
 class DashboardViewController: BaseViewController, UIBroker {
     var payLoad: [String : Any]?
-
+    
     lazy var dashboardViewModel = DashboardViewModel()
-
+    
     @IBOutlet weak var barChartView: BarChartView! {
         didSet {
             barChartView.noDataText = "You need to provide data for the chart."
@@ -42,10 +42,15 @@ class DashboardViewController: BaseViewController, UIBroker {
         navigate(module: "prospects", pushOrPresent: .push, payLoad: [:],
                  pushPresentAnimated: false, schema: "Dashboard", completion: nil)
     }
+    
+    @IBAction func accountButtonClicked(_ sender: Any) {
+        navigate(module: "accounts", pushOrPresent: .push, payLoad: [:],
+                 pushPresentAnimated: false, schema: "Dashboard", completion: nil)
+    }
 }
 
 extension DashboardViewController: ChartViewDelegate {
-
+    
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         
     }
@@ -69,7 +74,7 @@ extension DashboardViewController: ChartViewDelegate {
     func chartTranslated(_ chartView: ChartViewBase, dX: CGFloat, dY: CGFloat) {
         
     }
-
+    
     // Callbacks when Animator stops animating
     func chartView(_ chartView: ChartViewBase, animatorDidStop animator: Animator) {
         
@@ -89,22 +94,22 @@ extension DashboardViewController {
         legend.yOffset = 10.0;
         legend.xOffset = 10.0;
         legend.yEntrySpace = 0.0;
-
+        
         let xaxis = barChartView.xAxis
         xaxis.drawGridLinesEnabled = true
         xaxis.labelPosition = .bottom
         xaxis.centerAxisLabelsEnabled = true
         xaxis.valueFormatter = IndexAxisValueFormatter(values:self.dashboardViewModel.getAccounts())
         xaxis.granularity = 1
-
+        
         let leftAxisFormatter = NumberFormatter()
         leftAxisFormatter.maximumFractionDigits = 1
-
+        
         let yaxis = barChartView.leftAxis
         yaxis.spaceTop = 0.35
         yaxis.axisMinimum = 0
         yaxis.drawGridLinesEnabled = false
-
+        
         barChartView.rightAxis.enabled = false
         
         setChart()
@@ -113,25 +118,25 @@ extension DashboardViewController {
     private func setChart() {
         var dataEntries: [BarChartDataEntry] = []
         var dataEntries1: [BarChartDataEntry] = []
-
+        
         for i in 0..<self.dashboardViewModel.getAccounts().count {
-
+            
             let dataEntry = BarChartDataEntry(x: Double(i) , y: Double(self.dashboardViewModel.getOpenNeeds()[i]))
             dataEntries.append(dataEntry)
-
+            
             let dataEntry1 = BarChartDataEntry(x: Double(i) , y: Double(self.dashboardViewModel.getClosedNeeds()[i]))
             dataEntries1.append(dataEntry1)
         }
-
+        
         let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Open Needs")
         let chartDataSet1 = BarChartDataSet(entries: dataEntries1, label: "Needs Closed")
-
+        
         let dataSets: [BarChartDataSet] = [chartDataSet,chartDataSet1]
         chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
         chartDataSet1.colors = [UIColor(red: 0/255, green: 100/255, blue: 0/255, alpha: 1)]
-
+        
         let chartData = BarChartData(dataSets: dataSets)
-
+        
         let groupSpace = 0.3
         let barSpace = 0.05
         let barWidth = 0.3

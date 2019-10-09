@@ -8,6 +8,8 @@
 		<string>Main.DashboardViewController</string>
 		<key>prospects</key>
 		<string>Main.ProspectsViewController</string>
+		<key>accounts</key>
+		<string>Main.AccountViewController</string>
 	</dict>
 </dict>
 </plist>
