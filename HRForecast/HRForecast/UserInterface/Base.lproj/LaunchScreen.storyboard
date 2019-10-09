@@ -16,17 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgq-QI-yDD">
-                                <rect key="frame" x="499" y="406.5" width="114.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HowAthon" translatesAutoresizingMaskIntoConstraints="NO" id="z2l-Gi-UgJ">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Wgq-QI-yDD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9Wt-DI-R2I"/>
-                            <constraint firstItem="Wgq-QI-yDD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="IJd-F6-ytc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z2l-Gi-UgJ" secondAttribute="bottom" id="BEK-K2-HXz"/>
+                            <constraint firstItem="z2l-Gi-UgJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zjv-BH-UAW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z2l-Gi-UgJ" secondAttribute="trailing" id="hWL-1Q-3sT"/>
+                            <constraint firstItem="z2l-Gi-UgJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="icB-3H-eda"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -36,4 +35,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HowAthon" width="768" height="1004"/>
+    </resources>
 </document>
