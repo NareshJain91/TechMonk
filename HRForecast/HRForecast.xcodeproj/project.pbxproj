@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42711842234D9541000E77D7 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 42711841234D9541000E77D7 /* Charts */; };
 		9E1EFCAC234D85E4005EE644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1EFCAB234D85E4005EE644 /* Assets.xcassets */; };
 		9E1EFCBF234D863E005EE644 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EFCB7234D863E005EE644 /* ViewController.swift */; };
 		9E1EFCC0234D863E005EE644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EFCB9234D863E005EE644 /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED892DEED1FDA898DCF3B7BC /* Pods_HRForecast.framework in Frameworks */,
+				42711842234D9541000E77D7 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +103,6 @@
 				F6F7E59642828619B7F24520 /* Pods-HRForecast.debug.xcconfig */,
 				D2E943906CCC2DAA077AB16D /* Pods-HRForecast.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,6 +132,9 @@
 			dependencies = (
 			);
 			name = HRForecast;
+			packageProductDependencies = (
+				42711841234D9541000E77D7 /* Charts */,
+			);
 			productName = HRForecast;
 			productReference = 9E1EFCA1234D85E3005EE644 /* HRForecast.app */;
 			productType = "com.apple.product-type.application";
@@ -435,6 +439,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42711841234D9541000E77D7 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9E1EFC99234D85E3005EE644 /* Project object */;
 }
