@@ -29,3 +29,21 @@ struct Prospects: Codable {
 struct ProspectsData {
     var accounts: [String]
 }
+
+struct Candidates: Codable {
+    var list: [CandidateInfo]
+}
+
+struct CandidateInfo: Codable {
+    var cid: String
+    var email: String
+    var experience: Float
+    var first_name: String
+    var gender: String
+    var last_name: String
+    var phone_number: String
+    var priority: String
+    var skill: String
+    var stage: String
+    var username: String
+}

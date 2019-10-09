@@ -31,13 +31,33 @@ class ProspectsWorker: BaseWorker {
             }
             
             let prospects = ProspectsData.init(accounts: accountNames)
-            callback(nil, prospects)
-//            prospectsAggregator(result as? Array<SkillSet>, nil, callback: callback)
+            prospectsAggregator(prospects, nil, callback: callback)
         })
         
-//        NetworkManager.sharedInstance().start(CandidatesService(), serviceResponse: { (err: NSError?, result: Any?) -> Void in
-//            prospectsAggregator(nil, result as? Array<Candidates>, callback: callback)
-//        })
+        NetworkManager.sharedInstance().start(CandidatesService(), serviceResponse: { (err: NSError?, result: Any?) -> Void in
+            
+            guard let response =  result as? Array<Any> else {
+                let parseError = NSError(domain: SessionManager.errorDomain, code: -1, userInfo: [NSLocalizedDescriptionKey: "Response was not 'Skill Set' object."])
+                callback(parseError, nil)
+                return
+            }
+            
+            let candidates = rootKeyForCandidates(response)
+            prospectsAggregator(nil, candidates, callback: callback)
+        })
+    }
+    
+    class func rootKeyForCandidates(_ data: Array<Any>) -> Candidates {
+        var candidatesList = [CandidateInfo]()
+        for element in data {
+            if let elementData = element as? Dictionary<String, Any> {
+                if let candidate = parseData(elementData, type: CandidateInfo.self) {
+                    candidatesList.append(candidate)
+                }
+            }
+        }
+        let candidates = Candidates(list: candidatesList)
+        return candidates
     }
     
     class func rootKeyForSkillSet(_ data: Dictionary<String, Any>) -> Prospects {
@@ -66,17 +86,17 @@ class ProspectsWorker: BaseWorker {
         return SkillSetList(name: name, list: skillsList)
     }
     
-//    private class func prospectsAggregator(_ skills: Array<SkillSet>?, _ candidates: Array<Candidates>?,
-//                                           callback: @escaping WorkerCallback) {
-//        if let skills = skills {
-//            ProspectsWorker.data.append(skills)
-//        }
-//        if let candidates = candidates {
-//            ProspectsWorker.data.append(candidates)
-//        }
-//        
-//        if data.count > 2 {
-//            callback(nil, nil)
-//        }
-//    }
+    private class func prospectsAggregator(_ skills: ProspectsData?, _ candidates: Candidates?,
+                                           callback: @escaping WorkerCallback) {
+        if let skills = skills {
+            ProspectsWorker.data.append(skills)
+        }
+        if let candidates = candidates {
+            ProspectsWorker.data.append(candidates)
+        }
+        
+        if data.count >= 2 {
+            callback(nil, ProspectsWorker.data)
+        }
+    }
 }
